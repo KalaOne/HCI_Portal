@@ -6,3 +6,16 @@
 body {
   padding-top: 56px;
 }
+
+.banner{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.banner a{
+  color: black
+}
+
+.banner a:hover{
+  font-weight: 750;
+}
