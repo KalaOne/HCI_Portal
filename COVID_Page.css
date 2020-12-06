@@ -1,0 +1,25 @@
+#DailyCOVID {
+    max-width:100%;
+    display:block;
+    background-color: #00aef0;
+    color: white;
+    width: 100%;
+    margin: 0 auto 2px;
+}
+
+/*Link to similar shades to blue box: https://www.color-hex.com/color/00aef0*/
+
+#DailyCOVID:hover {
+  background-color: #000000;
+  color: white;
+}
+
+#PortalFooter {
+    background: #282828 !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+}
+
+#PageOptions:hover{
+    background-color:#E3934D;
+}
