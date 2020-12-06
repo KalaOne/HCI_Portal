@@ -10,7 +10,7 @@
 /*Link to similar shades to blue box: https://www.color-hex.com/color/00aef0*/
 
 #DailyCOVID:hover {
-  background-color: #000000;
+  opacity: 0.5;
   color: white;
 }
 
@@ -20,6 +20,7 @@
     text-align: center !important;
 }
 
-#PageOptions:hover{
-    background-color:#E3934D;
+.PageOptions img:hover {
+    opacity: 0.5;
 }
+
