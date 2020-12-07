@@ -1,10 +1,12 @@
 #DailyCOVID {
     max-width:100%;
     display:block;
-    background-color: #00aef0;
+    background-color: #282828;
     color: white;
     width: 100%;
     margin: 0 auto 2px;
+    font-weight: bold;
+
 }
 
 /*Link to similar shades to blue box: https://www.color-hex.com/color/00aef0*/
@@ -36,4 +38,8 @@
 #MoreCOVIDNews:hover {
   opacity: 0.5;
   color: white;
+}
+
+.PageOptions1 img:hover {
+    opacity: 0.5;
 }
