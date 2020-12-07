@@ -7,63 +7,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="stylesheet" href="COVID_Page.css">
 
-
-  <title>COVID-19 Guidance</title>
+  <title>MyUEA Portal</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
-  <link href="css/heroic-features.css" rel="stylesheet">
+  <link href="css/general.css" rel="stylesheet">
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
+  <!-- JavaScript -->
+  <script src="javascript/general.js"></script>
 </head>
 
 <body>
-
-  <!-- Navigation -->
+  <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
+  <!-- Nav bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html"><h3>MY UEA</h3></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+       aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">HOME</a>
+            <span class="sr-only">(current)</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+          </li>
+          <!-- <li class="nav-item">
+           <i class="fa fa-search nav-link" id="search"></i>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" id="navbar-search" href="#">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <div class="btn-group dropright">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                More...
+              </button>
+            </div>
           </li>
         </ul>
       </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn" id="btnShow" >
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
+
+  <!-- Settings modal -->
+  <div class="modal" id="sampleModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                  <li><button id="colour-inversion">Invert colours</button></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
+    <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
+      <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span aria-hidden="true" class="text-light">&times;</span></button>
+        <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
+    </header>
+    <div class="bs-canvas-content px-3 py-4">
+      <!-- Sidebar content -->
+      <form class="form-inline" id="menu-search">
+        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <a href="#">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </a>
+      </form>
+      <ul class="list-group list-group-flush side-menu-links">
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+      </ul>
+    </div>    
+  </div>
 
   <!-- Page Content -->
   <div class="container">
     <br><br>
     <h1 class="display-2" style="text-align: center">COVID-19 Guidance</h1>
     <br><br>
-      <p><a class="btn btn-pink" id= "DailyCOVID" href="https://my.uea.ac.uk/news/-/article/covid-19-update"
-            target="_blank" title="Daily Updates of COVID-19 Cases on Campus">Daily Update of COVID-19 Cases on Campus</a></p>
+    <p><a class="btn btn-pink" id="DailyCOVID" href="https://my.uea.ac.uk/news/-/article/covid-19-update"
+        target="_blank" title="Daily Updates of COVID-19 Cases on Campus">Daily Update of COVID-19 Cases on Campus</a>
+    </p>
     <!-- Page Features -->
     <div class="row text-center">
 
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
-          <a href="https://my.uea.ac.uk/documents/20142/3241028/Safety+First+-+COVID+Checklist.pdf/7b78b3bf-5751-6e96-714c-eb4fe8b72ff0?t=1600183785253">
-          <img class="checklist" src="../HCI_Portal/static/Checklist.png" alt="COVID_Checklist">
+          <a
+            href="https://my.uea.ac.uk/documents/20142/3241028/Safety+First+-+COVID+Checklist.pdf/7b78b3bf-5751-6e96-714c-eb4fe8b72ff0?t=1600183785253">
+            <img class="checklist" src="../HCI_Portal/static/Checklist.png" alt="COVID_Checklist">
           </a>
         </div>
 
@@ -72,7 +143,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
           <a href="https://www.uea.ac.uk/covid19/notification-form">
-          <img class="testing" src="../HCI_Portal/static/Testing.png" alt="COVID_Testing">
+            <img class="testing" src="../HCI_Portal/static/Testing.png" alt="COVID_Testing">
           </a>
         </div>
 
@@ -81,7 +152,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
           <a href="https://www.uea.ac.uk/covid19/notification-form">
-          <img class="COVIDForm" src="../HCI_Portal/static/Form.png" alt="COVID_Form">
+            <img class="COVIDForm" src="../HCI_Portal/static/Form.png" alt="COVID_Form">
           </a>
         </div>
 
@@ -89,7 +160,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
           <a href="../HCI_Portal/static/ExampleGuidance.png">
-          <img class="guidance" src="../HCI_Portal/static/Guidance.png" alt="COVID_Guidance">
+            <img class="guidance" src="../HCI_Portal/static/Guidance.png" alt="COVID_Guidance">
           </a>
         </div>
 
@@ -97,8 +168,9 @@
 
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
-          <a href="https://my.uea.ac.uk/documents/20142/257263/Oneway+Map2.JPG/097df4ee-da86-659d-449c-47b123d2c8f2?t=1598548648511">
-          <img class="routes" src="../HCI_Portal/static/Campus_Routes.png" alt="COVID_Routes">
+          <a
+            href="https://my.uea.ac.uk/documents/20142/257263/Oneway+Map2.JPG/097df4ee-da86-659d-449c-47b123d2c8f2?t=1598548648511">
+            <img class="routes" src="../HCI_Portal/static/Campus_Routes.png" alt="COVID_Routes">
           </a>
         </div>
 
@@ -107,7 +179,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
           <a href="../HCI_Portal/static/ExampleFAQ.png">
-          <img class="FAQ" src="../HCI_Portal/static/FAQ.png" alt="COVID_FAQs">
+            <img class="FAQ" src="../HCI_Portal/static/FAQ.png" alt="COVID_FAQs">
           </a>
         </div>
 
@@ -115,21 +187,22 @@
 
     </div>
     <!-- /.row -->
-
   </div>
+
   <br><br>
   <!-- /.container -->
   <div class="container">
     <h4 class="display-4" style="text-align: center">Latest COVID-19 News</h4>
 
-<br><br>
-<!-- COVID News Section -->
-<div class="row text-center">
+    <br><br>
+    <!-- COVID News Section -->
+    <div class="row text-center">
 
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions1">
           <a href="https://my.uea.ac.uk/news/-/article/still-time-to-book-a-rapid-covid-test">
-          <img class="COVIDNews1" src="../HCI_Portal/static/COVIDNews1.jpg" alt="COVID_News1" width="274" height="465">
+            <img class="COVIDNews1" src="../HCI_Portal/static/COVIDNews1.jpg" alt="COVID_News1" width="274"
+              height="465">
           </a>
         </div>
 
@@ -138,7 +211,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions1">
           <a href="https://my.uea.ac.uk/news/-/article/tier-2-what-does-it-mean-">
-          <img class="testing" src="../HCI_Portal/static/COVIDNews2.jpg" alt="COVID_News2" width="274" height="465">
+            <img class="testing" src="../HCI_Portal/static/COVIDNews2.jpg" alt="COVID_News2" width="274" height="465">
           </a>
         </div>
 
@@ -147,20 +220,22 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions1">
           <a href="https://my.uea.ac.uk/news/-/article/lockdown-announcement-student-faqs">
-          <img class="COVIDForm" src="../HCI_Portal/static/COVIDNews3.jpg" alt="COVID_News3" width="274" height="465">
+            <img class="COVIDForm" src="../HCI_Portal/static/COVIDNews3.jpg" alt="COVID_News3" width="274" height="465">
           </a>
         </div>
       </div>
 
-  <div class="container">
-          <br><br>
-          <p><a class="btn btn-pink" id= "MoreCOVIDNews" href="https://my.uea.ac.uk/news" target="_blank" title="View More News">View More News</a></p>
-  </div>
-  <br>
-</div>
+      <div class="container">
+        <br><br>
+        <p><a class="btn btn-pink" id="MoreCOVIDNews" href="https://my.uea.ac.uk/news" target="_blank"
+            title="View More News">View More News</a></p>
+      </div>
+      <br>
+    </div>
 
-</div>
-  <br><br>
+  </div>
+  <!-- /.container -->
+
   <!-- Footer -->
   <footer class="py-5 bg-dark" id="PortalFooter">
     <div class="container">
