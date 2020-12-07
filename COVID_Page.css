@@ -37,3 +37,7 @@
   opacity: 0.5;
   color: white;
 }
+
+.PageOptions1 img:hover {
+    opacity: 0.5;
+}
