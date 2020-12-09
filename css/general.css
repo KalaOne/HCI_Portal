@@ -33,12 +33,15 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+/*Footer CSS*/
 
 #PortalFooter {
   background: #282828 !important;
   color: #FFFFFF !important;
   text-align: center !important;
 }
+
+/*COVID Page CSS*/
 
 #DailyCOVID:hover {
   opacity: 0.5;
@@ -52,10 +55,13 @@ body {
 #MoreCOVIDNews {
     max-width:15%;
     display:block;
-    background-color: #00aef0;
+    background-color: #e40087;
     color: white;
     width: 100%;
     margin: 0 auto 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: brandonTextBlack,Arial,sans-serif;
 }
 
 #MoreCOVIDNews:hover {
@@ -70,10 +76,13 @@ body {
 #DailyCOVID {
   max-width:100%;
   display:block;
-  background-color: #00aef0;
+  background-color: #e40087;
   color: white;
   width: 100%;
   margin: 0 auto 2px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: brandonTextBlack,Arial,sans-serif;
 }
 
 .fa-cog {
@@ -127,4 +136,11 @@ margin-right: -330px;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 86%;
+}
+
+/*Breadcrumbs CSS*/
+
+.breadcrumb {
+    background-color: white;
+    padding: 0;
 }
