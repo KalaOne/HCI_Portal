@@ -44,12 +44,13 @@ body {
 /*COVID Page CSS*/
 
 #DailyCOVID:hover {
-  opacity: 0.5;
+  filter: brightness(90%);
   color: white;
 }
 
 .PageOptions img:hover {
-    opacity: 0.5;
+    filter: brightness(90%);
+    border-radius: 20px;
 }
 
 #MoreCOVIDNews {
@@ -65,12 +66,13 @@ body {
 }
 
 #MoreCOVIDNews:hover {
-  opacity: 0.5;
+  filter: brightness(90%);
   color: white;
 }
 
 .PageOptions1 img:hover {
-    opacity: 0.5;
+  filter: brightness(90%);
+  border-radius: 8px;
 }
 
 #DailyCOVID {
@@ -143,4 +145,117 @@ margin-right: -330px;
 .breadcrumb {
     background-color: white;
     padding: 0;
+}
+
+/*Homepage Widgets CSS*/
+
+.WidgetContainer {
+  display: grid;
+}
+
+.widget {
+  cursor: move;
+}
+
+.widget.over {
+  border: 3px dotted #666;
+}
+
+.EditWidgets {
+  max-width:100%;
+  display:block;
+  background-color: #e40087;
+  color: white;
+  width: 100%;
+  margin: 0 auto 2px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: brandonTextBlack,Arial,sans-serif;
+}
+
+.EditWidgets:hover {
+  filter: brightness(90%);
+  color: white;
+}
+
+.CancelChanges {
+  max-width:100%;
+  display:none;
+  background-color: grey;
+  color: white;
+  width: 100%;
+  margin: 0 auto 2px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: brandonTextBlack,Arial,sans-serif;
+}
+
+.CancelChanges:hover {
+    filter: brightness(90%);
+    color: white;
+}
+
+/*CSS To Make Widgets Show/Hide*/
+#BB {
+    display: block;
+}
+
+#EV {
+    display: block;
+}
+
+#ES {
+    display: block;
+}
+
+#COVID {
+    display: block;
+}
+
+#Pay {
+    display: block;
+}
+
+#LIB {
+    display: block;
+}
+
+#Health {
+    display: block;
+}
+
+#Work {
+    display: block;
+}
+
+#NS {
+    display: block;
+}
+
+.PageOptions2 img:hover {
+  filter: brightness(90%);
+  border-radius: 20px;
+}
+
+/*Widget Edit Buttons*/
+
+.HideOrShow {
+  display: none;
+  position: absolute;
+  top: 12%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #00aef0;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.HideOrShow:hover {
+  filter: brightness(90%);
 }
