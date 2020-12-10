@@ -193,9 +193,10 @@ margin-right: -330px;
 }
 
 #settings-list {
-  list-style-type: none;
-/*Breadcrumbs CSS*/
+    list-style-type: none;
 }
+/*Breadcrumbs CSS*/
+
 
 .breadcrumb {
     background-color: white;
