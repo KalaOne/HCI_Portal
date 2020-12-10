@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MyUEA Portal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/general.css" rel="stylesheet">
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+  <!-- JavaScript -->
+  <script src="javascript/general.js"></script>
+</head>
+
+<body>
+  <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><h3>MY UEA</h3></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+       aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">HOME</a>
+            <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+          </li>
+          <!-- <li class="nav-item">
+           <i class="fa fa-search nav-link" id="search"></i>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" id="navbar-search" href="#">Search</a>
+          </li>
+          <li class="nav-item">
+            <div class="btn-group dropright">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                More...
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn" id="btnShow" >
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- COVID-19 Banner -->
+  <div class="p-3 mb-2 mt-2 bg-warning text-dark text-center banner ">
+    <a href="../HCI_Portal/COVID_Guidance.html">See latest COVID-19 Information</a>
+  </div>
+
+  <!-- Settings modal -->
+  <div class="modal" id="sampleModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                  <li><button id="colour-inversion">Invert colours</button></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
+    <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
+      <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span aria-hidden="true" class="text-light">&times;</span></button>
+        <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
+    </header>
+    <div class="bs-canvas-content px-3 py-4">
+      <!-- Sidebar content -->
+      <form class="form-inline" id="menu-search">
+        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <a href="#">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </a>
+      </form>
+      <ul class="list-group list-group-flush side-menu-links">
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+      </ul>
+    </div>    
+  </div>
+
+  <!-- Page Content -->
+  <div class="container WidgetContainer">
+
+    <!-- Jumbotron Header -->
+   <h1 class="display-3" style="text-align: center">My Dashboard</h1>
+    <br><br>
+    <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton" title="Edit Widgets" >Modify Widgets</button>
+    <br>
+    <button class="btn btn-pink CancelChanges" onclick="window.location.reload();" id="CancelButton" title="Cancel Changes" >Cancel Changes </button>
+
+    <br>
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a
+            href="https://learn.uea.ac.uk/" id="BB">
+            <img class="blackboard" src="../HCI_Portal/static/HomeIcons/Blackboard.jpg" alt="Blackboard Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton1" onclick="HideBB()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://sso.uea.ac.uk/evision" id="EV">
+            <img class="Evision" src="../HCI_Portal/static/HomeIcons/Evision.png" alt="Evision Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton2" onclick="HideEV()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://webmail.uea.ac.uk/" id="ES">
+            <img class="EmailSchedule" src="../HCI_Portal/static/HomeIcons/EmailSchedule.jpg" alt="Email & Schedule Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton3" onclick="HideES()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://my.uea.ac.uk/divisions/admissions-recruitment-marketing/communications/covid-19-information-and-guidance" id="COVID">
+            <img class="COVIDUpdates" src="../HCI_Portal/static/HomeIcons/COVID19.jpg" alt="COVID-19 Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton4" onclick="HideCOVID()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://myview.uea.ac.uk/dashboard/dashboard-ui/index.html#/landing" id="Pay">
+            <img class="Payslips" src="../HCI_Portal/static/HomeIcons/Payslips.jpg" alt="Payslips Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton5" onclick="HidePay()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://my.uea.ac.uk/library" id="LIB">
+            <img class="MyLibrary" src="../HCI_Portal/static/HomeIcons/Library.jpg" alt="Library Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton6" onclick="HideLIB()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+
+      </div>
+
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://my.uea.ac.uk/help-me-with/my-wellbeing" id="Health">
+            <img class="MyWellbeing" src="../HCI_Portal/static/HomeIcons/MyWellbeing.jpg" alt="Wellbeing Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+
+      </div>
+
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://my.uea.ac.uk/divisions/research-and-innovation/careers" id="Work">
+            <img class="CareerCentral" src="../HCI_Portal/static/HomeIcons/CareerCentral.jpg" alt="CareerCentral Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="PageOptions2">
+          <a href="https://my.uea.ac.uk/help-me-with/being-a-new-student" id="NS">
+            <img class="NewStudents" src="../HCI_Portal/static/HomeIcons/NewStudents.jpg" alt="New Students Widget">
+          </a>
+          <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Hide</button>
+          <br><br>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark" id="PortalFooter">
+    <div class="container">
+      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
+      </p>
+      <br>
+      <div class="container">
+      <div class="footer_links">
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" style="color: #FFFFFF !important">Accessibility</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank" style="color: #FFFFFF !important">Legal Statements</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement" target="_blank" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" style="color: #FFFFFF !important">Cookie Policy</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection" target="_blank" style="color: #FFFFFF !important">Data Protection</a>
+          </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--  <script>-->
+<!--    function jsFunction(){-->
+<!--      x = document.getElementById("more1")-->
+<!--      y = document.getElementById("more2")-->
+<!--      z = document.getElementById("more3")-->
+
+<!--      if (document.getElementById("more1").style.display=="none") {-->
+<!--      document.getElementById("more1").style.display = "block";-->
+<!--      document.getElementById("more2").style.display = "block";-->
+<!--      document.getElementById("more3").style.display = "block";-->
+<!--      }-->
+<!--      if (document.getElementById("more1").style.display=="block") {-->
+<!--      document.getElementById("more1").style.display = "none";-->
+<!--      document.getElementById("more2").style.display = "none";-->
+<!--      document.getElementById("more3").style.display = "none";-->
+<!--      }-->
+
+<!--      }-->
+<!--  </script>-->
+
+<!--Script for moving widgets-->
+<!--  Source: https://web.dev/drag-and-drop/-->
+<!--  Other source to consider: https://github.com/hootsuite/grid-->
+<!--Need to change eventlistener to onclick!!!-->
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+
+  var dragSrcEl = null;
+
+  function handleDragStart(e) {
+    this.style.opacity = '1';
+
+    dragSrcEl = this;
+
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.innerHTML);
+  }
+
+  function handleDragOver(e) {
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
+
+    e.dataTransfer.dropEffect = 'move';
+
+    return false;
+  }
+
+  function handleDragEnter(e) {
+    this.classList.add('over');
+  }
+
+  function handleDragLeave(e) {
+    this.classList.remove('over');
+  }
+
+  function handleDrop(e) {
+    if (e.stopPropagation) {
+      e.stopPropagation(); // stops the browser from redirecting.
+    }
+
+    if (dragSrcEl !== this) {
+      dragSrcEl.innerHTML = this.innerHTML;
+      this.innerHTML = e.dataTransfer.getData('text/html');
+    }
+
+    return false;
+  }
+
+  function handleDragEnd(e) {
+    this.style.opacity = '1';
+
+    items.forEach(function (item) {
+      item.classList.remove('over');
+    });
+  }
+
+
+  let items = document.querySelectorAll('.WidgetContainer .widget');
+  items.forEach(function(item) {
+    item.addEventListener('dragstart', handleDragStart, false);
+    item.addEventListener('dragenter', handleDragEnter, false);
+    item.addEventListener('dragover', handleDragOver, false);
+    item.addEventListener('dragleave', handleDragLeave, false);
+    item.addEventListener('drop', handleDrop, false);
+    item.addEventListener('dragend', handleDragEnd, false);
+  });
+});
+
+</script>
+
+<!--Script to change between "edit" and "save" for modifying widgets.-->
+<!--Source: https://css-tricks.com/swapping-out-text-five-different-ways/-->
+
+<script>
+// $('.EditWidgets').on("click", function() {
+//   var el = $(this);
+//   if (el.text() == el.data("text-swap")) {
+//     el.text(el.data("text-original"));
+//   } else {
+//     el.data("text-original", el.text());
+//     el.text(el.data("text-swap"));
+//   }
+// });
+
+</script>
+
+<!--&lt;!&ndash;Script to change between "Hide" and "Show" for modifying widgets.&ndash;&gt;-->
+<!--&lt;!&ndash;Source: https://css-tricks.com/swapping-out-text-five-different-ways/&ndash;&gt;-->
+
+<!--<script>-->
+<!--$('.HideOrShow').on("click", function() {-->
+<!--  var el = $(this);-->
+<!--  if (el.text() == el.data("text-swap")) {-->
+<!--    el.text(el.data("text-original"));-->
+<!--  } else {-->
+<!--    el.data("text-original", el.text());-->
+<!--    el.text(el.data("text-swap"));-->
+<!--  }-->
+<!--});-->
+
+<!--</script>-->
+
+<!--<script>-->
+<!--function ToggleHideOrShow() {-->
+
+<!--    var HideShow = document.getElementsByClassName('HideOrShow');-->
+
+<!--    // Get the current value of the hide/show button's display property-->
+<!--    var displaySetting = HideShow.style.display;-->
+
+<!--    // Get the modify widget button, to change what it says.-->
+<!--    var ModifyWidgetButton = document.getElementsByClassName('EditWidgets');-->
+
+<!--    //  toggle the hide/show and the modify button text, depending on current state-->
+<!--    if (display == 'none') {-->
+<!--      // hide/show is visible. hide it-->
+<!--      HideShow.style.display = 'block';-->
+<!--      // change button text-->
+<!--      ModifyWidgetButton.innerHTML = 'Modify Widgets';-->
+<!--    }-->
+<!--    else {-->
+<!--      // Hide/Show is hidden. show it-->
+<!--      HideShow.style.display = 'block';-->
+<!--      // change button text-->
+<!--      ModifyWidgetButton.innerHTML = 'Save Changes';-->
+<!--    }-->
+<!--  }-->
+<!--</script>-->
+
+<!--Hide the "Hide/Show" buttons and only show them when in edit mode.-->
+
+<script>
+  function myFunction() {
+    var editButton = document.getElementById('EditWidgetButton');
+    var x = document.getElementById("HideShowButton1").style.display;
+    if (x == "block") {
+      editButton.innerHTML = 'Modify Widgets';
+      document.getElementById("HideShowButton1").style.display = "none";
+      document.getElementById("HideShowButton2").style.display = "none";
+      document.getElementById("HideShowButton3").style.display = "none";
+      document.getElementById("HideShowButton4").style.display = "none";
+      document.getElementById("HideShowButton5").style.display = "none";
+      document.getElementById("HideShowButton6").style.display = "none";
+      document.getElementById("HideShowButton7").style.display = "none";
+      document.getElementById("HideShowButton8").style.display = "none";
+      document.getElementById("HideShowButton9").style.display = "none";
+      document.getElementById("CancelButton").style.display = "none";
+      alert("Your changes have been saved.");
+
+    } else {
+      document.getElementById("HideShowButton1").style.display = "block";
+      document.getElementById("HideShowButton2").style.display = "block";
+      document.getElementById("HideShowButton3").style.display = "block";
+      document.getElementById("HideShowButton4").style.display = "block";
+      document.getElementById("HideShowButton5").style.display = "block";
+      document.getElementById("HideShowButton6").style.display = "block";
+      document.getElementById("HideShowButton7").style.display = "block";
+      document.getElementById("HideShowButton8").style.display = "block";
+      document.getElementById("HideShowButton9").style.display = "block";
+      document.getElementById("CancelButton").style.display = "block";
+
+      editButton.innerHTML = 'Save Changes';
+
+
+    }
+  }
+
+</script>
+
+<!--Functions to hide every single widget-->
+<script>
+  function HideBB() {
+    var editButton = document.getElementById('HideShowButton1');
+    var BlackboardWidget = document.getElementById("BB").style.display;
+    if (BlackboardWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("BB").style.display = "block";
+
+    } else {
+      document.getElementById("BB").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideEV() {
+    var editButton = document.getElementById('HideShowButton2');
+    var EvisionWidget = document.getElementById("EV").style.display;
+    if (EvisionWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("EV").style.display = "block";
+
+    } else {
+      document.getElementById("EV").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideES() {
+    var editButton = document.getElementById('HideShowButton3');
+    var EmailScheduleWidget = document.getElementById("ES").style.display;
+    if (EmailScheduleWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("ES").style.display = "block";
+
+    } else {
+      document.getElementById("ES").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideCOVID() {
+    var editButton = document.getElementById('HideShowButton4');
+    var COVIDWIdget = document.getElementById("COVID").style.display;
+    if (COVIDWIdget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("COVID").style.display = "block";
+
+    } else {
+      document.getElementById("COVID").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HidePay() {
+    var editButton = document.getElementById('HideShowButton5');
+    var PayWidget = document.getElementById("Pay").style.display;
+    if (PayWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("Pay").style.display = "block";
+
+    } else {
+      document.getElementById("Pay").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideLIB() {
+    var editButton = document.getElementById('HideShowButton6');
+    var LIBWidget = document.getElementById("LIB").style.display;
+    if (LIBWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("LIB").style.display = "block";
+
+    } else {
+      document.getElementById("LIB").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideHealth() {
+    var editButton = document.getElementById('HideShowButton7');
+    var HealthWidget = document.getElementById("Health").style.display;
+    if (HealthWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("Health").style.display = "block";
+
+    } else {
+      document.getElementById("Health").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideWork() {
+    var editButton = document.getElementById('HideShowButton8');
+    var WorkWidget = document.getElementById("Work").style.display;
+    if (WorkWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("Work").style.display = "block";
+
+    } else {
+      document.getElementById("Work").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+
+<script>
+  function HideNS() {
+    var editButton = document.getElementById('HideShowButton9');
+    var NSWidget = document.getElementById("NS").style.display;
+    if (NSWidget == "none") {
+      editButton.innerHTML = 'Hide';
+      document.getElementById("NS").style.display = "block";
+
+    } else {
+      document.getElementById("NS").style.display = "none";
+
+      editButton.innerHTML = 'Show';
+
+    }
+  }
+</script>
+<!--  Potential script for making widgets not draggable unless edit button pressed-->
+  
+<!--<script>-->
+<!--    jQuery(function ($) {-->
+<!--        if ( $("button").click) {-->
+<!--            // replace the placeholder with widget edit access-->
+<!--            $( ".widget" ).replaceWith( '<div draggable="true" class="col-lg-4 col-md-6 mb-4 widget">');-->
+
+<!--        else {-->
+<!--            $( ".col-md-6" ).replaceWith( '<div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">>');-->
+
+<!--      }-->
+<!--    }});-->
+<!--    -->
+<!--</script>-->
+
+<!--Adding show/hide button in front of widget: https://www.w3schools.com/howto/howto_css_button_on_image.asp-->
+<!--Hide/show element: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp-->
+
+</body>
+
+</html>
