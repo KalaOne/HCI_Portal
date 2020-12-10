@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="static/newsstyle.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/577845f6a5.js" crossorigin="anonymous">
+  </script>
+
+  <title>News</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/general.css" rel="stylesheet">
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+  <!-- JavaScript -->
+  <script src="javascript/general.js"></script>
+</head>
+
+<body>
+
+  <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
+  <!-- Navbar Desktop -->
+  <div id="desktop-viewport">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbar-search" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
+                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                  More...
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button class="btn btnShow">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Nav bar Mobile-->
+  <div id="mobile-viewport">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbar-search" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
+                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                  More...
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler pull-left" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-center" href="index.html">
+          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button class="btn btnShow">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- COVID-19 Banner -->
+  <div class="p-3 mb-2 bg-warning text-dark text-center banner ">
+    <a href="../HCI_Portal/COVID_Guidance.html">See latest COVID-19 Information</a>
+  </div>
+
+
+  <!-- Settings modal -->
+  <div class="modal" id="sampleModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Settings</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul id="settings-list">
+            <li><button class="btn btn-info" id="colour-inversion">Invert colours</button></li>
+            <li class="font-changes-parrent" id="font-changes">
+              <button class="btn btn-info font-changes-child" id="smaller-font">-</button>
+              <p class="font-changes-child" id="font-changes-text">Change font size</p>
+              <button class="btn btn-info font-changes-child" id="larger-font">+</button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
+    <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
+      <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span aria-hidden="true" class="text-light">&times;</span></button>
+        <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
+    </header>
+    <div class="bs-canvas-content px-3 py-4">
+      <!-- Sidebar content -->
+      <form class="form-inline" id="menu-search">
+        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <a href="#">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </a>
+      </form>
+      <ul class="list-group list-group-flush side-menu-links">
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!--Breadcrumbs for website-->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><b>Home</b></a></li>
+        <li class="breadcrumb-item active" aria-current="page"><b>News</b></li>
+      </ol>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="row" style="padding: 8px ">
+        <div class="col-sm-2"></div>
+          <h1 class="col-sm-12 display-3" id="news_header">News</h1>
+    <!-- Dropdown menu for student/staff news -->
+    </div>
+    <div class="row" style=" text-align: right">
+        <div class="col-sm-9"></div>
+
+        <div class="col-sm-3 dropdown" id="filter_position">
+            <select class="custom-select car-row"  id="view-filter" onchange="jsFunction(this.value);">
+                <option value='Staff_val'>Staff view</option>
+                <option value='Student_val' selected >Student view</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!--  Email announcements section -->
+    <div class="row text-center" style="background-color: #E0E0E0; border-radius: 25px; margin: 5px;">
+
+      <!-- Header for announcements-->
+      <div class="col-lg-12 col-md-6 mb-4" >
+          <div class="row">
+                <h1 class="display-6" style="text-align: left; padding-top: 10px; padding-left: 20px">Email Announcements</h1>
+          </div>
+      </div>
+
+       <div class="col-lg-12 col-md-6 mb-4" id="1">
+           <p class="text-left" style="padding-left: 7px; padding-right: 0px;">
+               <b>Message from the Vice-Chancellor to all staff - Friday 27 November</b>
+               </br>
+            Dear colleagues,   Something I have learned during my time as Vice-Chancellor is that hidden
+            but deeply-rooted iniquities can only be tackled as a united community – not left to...
+              <div class="row">
+                <div class="col-sm-9"></div>
+                <button class="btn col-sm-3 continue_button" >Continue reading...</button>
+              </div>
+           </p>
+       </div>
+
+       <div class="col-lg-12 col-md-6 mb-4" id="2">
+<!--        <h6 class="display-3" style="text-align: left" >Email Announcements</h6>-->
+            <p class="text-left" style="padding-left: 7px; padding-right: 7px;">
+                <b>Message from the Vice-Chancellor to all staff - Friday 20 November</b>
+                </br>
+              Dear colleagues, Any organisation is defined by its people – and we really do have some of the best.
+              Whether it’s our professional services staff working round the clock to devise...
+                <div class="row">
+                    <div class="col-sm-9"></div>
+                    <button class="btn btn-uea-bluecol-sm-3 continue_button">Continue reading...</button>
+                </div>
+            </p>
+       </div>
+
+       <div class="col-lg-12 col-md-6 mb-4" id="3">
+           <p class="text-left" style="padding-left: 7px; padding-right: 0px;">
+               <b>Important Message for All Students: Travel, Testing and Teaching End of Term Arrangements -
+                   Please Read 20 November</b>
+               </br>
+                Important update on Travel, Testing and Teaching End of Term Arrangements –
+                Please Read From Deputy Vice-Chancellor Neil Ward
+               </br>
+                Dear Students, Here is some important guidance and latest government information to help you with your plans for the winter break...
+              <div class="row">
+                <div class="col-sm-9"></div>
+                <button class="btn btn-pink col-sm-3 continue_button" >Continue reading...</button>
+              </div>
+           </p>
+       </div>
+
+       <div class="col-lg-12 col-md-6 mb-4" id="4">
+<!--        <h6 class="display-3" style="text-align: left" >Email Announcements</h6>-->
+            <p class="text-left" style="padding-left: 7px; padding-right: 7px;">
+                <b>Message from Deputy Vice-Chancellor Professor Neil Ward:
+                    Teaching arrangements for the end of term - Friday 13 November</b>
+                </br>
+                 Dear students, Following the Government’s announcement this week about the ‘Student Travel Window’,
+                 we wanted to provide you with an update on end-of-term teaching arrangements to help those students
+                 who are planning to return home for the winter break.  As announced in our message...
+                <div class="row">
+                    <div class="col-sm-9"></div>
+                    <button class="btn btn-pink col-sm-3 continue_button">Continue reading...</button>
+                </div>
+            </p>
+       </div>
+        <!-- Link to more announcements -->
+        <div class="col-lg-12 col-md-6 mb-4" id="2" >
+            <div class="row" style="height: 30px;">
+                <div class="col-sm-1"></div>
+                    <button class="btn btn-pink col-sm-10 announcement_button" style="padding-right: 10px; text-align: center; ">More announcements...</button>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--  Search bar -->
+<!--      <div class="row">-->
+<!--        <nav class="navbar navbar-light bg-light">-->
+<!--          <form class="form-inline">-->
+<!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--          </form>-->
+<!--        </nav>-->
+<!--      </div>-->
+
+
+    <!-- Latest News  -->
+    <div class="row">
+        <!-- Latest News header -->
+        <div class="col-lg-12 col-md-6 mb-4">
+          <h4 class="display-4" id="Latest_news_section_header" >Latest News</h4>
+<!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="5" >
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\news-safety-first-one.jpg" alt="">
+            <div class="news_date">
+                <p>09 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  COVID-19 Update
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">Please read for an update on case numbers,
+                  a reminder on safety measures and what the University is doing to support students
+                  in self-isolation.</p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="6">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\DeanMainOrange.jpg" alt="">
+            <div class="news_date">
+                <p>04 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Meet the staff keeping campus running
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  The first in a series of videos celebrating the staff who have helped keep campus
+                  running in 2020 commemorates UEA’s cleaning staff. This is Dean Newton's story.
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="7">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\SchoolchildrenMain.jpg" alt="">
+            <div class="news_date">
+                <p>07 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  New education centre for thousands of local underprivileged students
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  The prospects of reaching further education could become three times more
+                  likely for thousands of young people from the most disadvantaged backgrounds in...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="8">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Winter Warmth V3.jpg" alt="">
+            <div class="news_date">
+                <p>08 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Winter Warmth launch
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  Craft sessions, free festive meal boxes, COVID-secure get togethers,
+                  and campus treasure hunts – find all this and more in the Winter Warmth programme for...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="9">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\ArjBlur.jpg" alt="">
+            <div class="news_date">
+                <p>08 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Spotlight on accessing Wellbeing Services
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  Now perhaps more than ever, it’s important that we prioritise our mental health.
+                  Read Pharmacy student Arj’s story of accessing Wellbeing services at UEA.
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="10">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Lateral for lasdun CMYK.jpg" alt="">
+            <div class="news_date">
+                <p>08 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Limited availability to get your rapid COVID-19 test
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  Today (8 December) has slots left, but the last day of testing tomorrow (9 December)
+                  has limited spaces.
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="11">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\sainsbury 2.jpg" alt="">
+            <div class="news_date">
+                <p>08 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Sainsbury Centre reopens with new exhibitions and cafe menus
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  The Sainsbury Centre will be open for the vast majority of the winter break,
+                  boasting exciting exhibitions, a new coffee outlet and a fresh cafe menu, with...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="12">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\TrophiesCrop.jpg" alt="">
+            <div class="news_date">
+                <p>07 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Applications open for Innovation and Impact Awards
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  The first in a series of videos celebrating the staff who have helped keep
+                  campus running in 2020 commemorates UEA’s cleaning staff. This is Dean Newton's story.
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="13">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\NeilJamesBulletin.jpg" alt="">
+            <div class="news_date">
+                <p>01 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  New Academic Director of Taught Programmes appointed
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  UEA is launching a new affordable workplace pension scheme which new and existing
+                  employees at Grades 1-6 (support staff categories only) can sign up to from...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="14">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Pension Savings Main 720 x 350.jpg" alt="">
+            <div class="news_date">
+                <p>01 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  New pension scheme – Save for your future
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  Today (8 December) has slots left, but the last day of testing tomorrow (9 December)
+                  has limited spaces.
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="15">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\news-lts-covid-pages.jpg" alt="">
+            <div class="news_date">
+                <p>01 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" style="color: black; font-size: 24px; line-height: 22pt">
+                  COVID-19 – Learning, Teaching and Assessment Information
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  The Learning and Teaching Service have put together an area on My UEA where you
+                  can find details of adjustments and support put in place to help you with your...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="16">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Proud to sponsor social graphic.jpg" alt="">
+            <div class="news_date">
+                <p>08 Dec 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Broads Authority wins UEA Knowledge Pioneer Award
+              </a>
+              <p class="card-text news_text" >
+                  Winners of the 2020 Norfolk Business Awards were announced on Tuesday 24 November,
+                  with the Broads Authority being named the winner of the UEA-sponsored...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="17">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\lab pic final.png" alt="">
+            <div class="news_date">
+                <p>30 Nov 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  Spotlight on Darrell Green
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  We speak to Darrell Green, who began his journey at UEA as an undergraduate,
+                  before completing a PhD and becoming a Lecturer and Group Leader in Norwich Medical...
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
+          <div class="card h-100 news_card">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\ShengLaura.jpg" alt="">
+            <div class="news_date">
+                <p>29 Nov 2020</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="news_title_link">
+                  UEA joins national campaign to boost number of women in science and engineering
+              </a>
+              <p class="card-text" style="margin-top: 0.75rem">
+                  Leading female academics welcome University’s membership of a national women in science network.
+              </p>
+            </div>
+<!--            <div class="card-footer">-->
+<!--              <a href="#" class="btn btn-primary">More Information</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+
+    </div>
+<!--      <button>More News</button>-->
+
+    <!-- news section closes below -->
+<!--    </div>-->
+    <!-- /.row -->
+  <!-- container closes below-->
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark" id="PortalFooter">
+    <div class="container">
+      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
+      </p>
+      <br>
+      <div class="container">
+      <div class="text-center footer_links">
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" style="color: #FFFFFF !important">Accessibility</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank" style="color: #FFFFFF !important">Legal Statements</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement" target="_blank" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" style="color: #FFFFFF !important">Cookie Policy</a> |
+              <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection" target="_blank" style="color: #FFFFFF !important">Data Protection</a>
+          </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <SCRIPT>
+      document.getElementById("1").style.display = "none";
+      document.getElementById("2").style.display = "none";
+      document.getElementById("3").style.display = "block";
+      document.getElementById("4").style.display = "block";
+      document.getElementById("13").style.display = "none";
+      document.getElementById("14").style.display = "none";
+      document.getElementById("15").style.display = "block";
+      document.getElementById("18").style.display = "block";
+
+        function jsFunction(value){
+            if (value == "Staff_val") {
+                document.getElementById("1").style.display = "block";
+                document.getElementById("2").style.display = "block";
+                document.getElementById("3").style.display = "none";
+                document.getElementById("4").style.display = "none"
+                document.getElementById("13").style.display = "block";
+                document.getElementById("14").style.display = "block";
+                document.getElementById("15").style.display = "none";
+                document.getElementById("18").style.display = "none";
+            }
+
+            else if (value == "Student_val") {
+                document.getElementById("1").style.display = "none";
+                document.getElementById("2").style.display = "none";
+                document.getElementById("3").style.display = "block";
+                document.getElementById("4").style.display = "block";
+                document.getElementById("13").style.display = "none";
+                document.getElementById("14").style.display = "none";
+                document.getElementById("15").style.display = "block";
+                document.getElementById("18").style.display = "block";
+            }
+        }
+
+  </SCRIPT>
+</body>
+
+</html>

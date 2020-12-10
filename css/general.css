@@ -37,7 +37,7 @@ body {
 /*Footer CSS*/
 
 #PortalFooter {
-  background: black;;
+  background: #282828 !important;;;
   color: #FFFFFF !important;
   text-align: center !important;
 }
@@ -55,7 +55,6 @@ body {
 }
 
 #MoreCOVIDNews {
-    max-width:15%;
     display:block;
     background-color: #e40087;
     color: white;
@@ -64,6 +63,11 @@ body {
     padding: 8px 16px;
     border-radius: 8px;
     font-family: brandonTextBlack,Arial,sans-serif;
+}
+
+.btn-pink {
+  background-color: #e40087;
+  color: white;
 }
 
 #MoreCOVIDNews:hover {
@@ -79,7 +83,6 @@ body {
 #DailyCOVID {
   max-width:100%;
   display:block;
-  background-color: #e40087;
   color: white;
   width: 100%;
   margin: 0 auto 2px;
@@ -142,7 +145,7 @@ margin-right: -330px;
 }
 
 .navbar {
-  background-color: black;
+  background-color:#282828 !important;;
 }
 @media only screen and (max-width: 991px) {
   #desktop-viewport {
@@ -182,6 +185,7 @@ margin-right: -330px;
 
 #smaller-font{
   margin-left: 0;
+  width: 2.3em;
 }
 
 #font-changes-text {
@@ -191,6 +195,7 @@ margin-right: -330px;
 #settings-list {
   list-style-type: none;
 /*Breadcrumbs CSS*/
+}
 
 .breadcrumb {
     background-color: white;
@@ -214,7 +219,6 @@ margin-right: -330px;
 .EditWidgets {
   max-width:100%;
   display:block;
-  background-color: #e40087;
   color: white;
   width: 100%;
   margin: 0 auto 2px;
@@ -282,9 +286,21 @@ margin-right: -330px;
     display: block;
 }
 
+.PageOptions img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px; 
+}
+
+.PageOptions2 img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* /* filter: brightness(95%); */
+  border-radius: 20px; 
+}
+
 .PageOptions2 img:hover {
   filter: brightness(90%);
   border-radius: 20px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 /*Widget Edit Buttons*/
@@ -308,4 +324,13 @@ margin-right: -330px;
 
 .HideOrShow:hover {
   filter: brightness(90%);
+}
+
+#close-settings-button {
+  color: white;
+}
+
+.btn-uea-blue {
+  background-color:  #00aef0;
+  color: white;
 }
