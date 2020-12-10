@@ -74,3 +74,15 @@
     filter: brightness(90%);
     color: white;
 }
+
+.announcement{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.5rem;
+    padding-top: 17px;
+    padding-left: 10px
+}
+
+.news_view {
+
+}
