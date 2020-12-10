@@ -35,7 +35,7 @@ body {
 }
 
 #PortalFooter {
-  background: #282828 !important;
+  background: black;
   color: #FFFFFF !important;
   text-align: center !important;
 }
@@ -127,4 +127,55 @@ margin-right: -330px;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 86%;
+}
+
+.navbar {
+  background-color: black;
+}
+@media only screen and (max-width: 991px) {
+  #desktop-viewport {
+    visibility: hidden;
+  }
+  #mobile-viewport {
+    visibility: visible; 
+  }
+  .navbar-toggler {
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  #desktop-viewport {
+    visibility: visible;
+  }
+  #mobile-viewport {
+    visibility: hidden; 
+  }
+}
+
+.font-changes-parrent {
+  display: table;
+  width: 60%;
+  margin: 10px 0;
+}
+
+.font-changes-child {
+  display: table-cell;
+  margin-left: 25px;
+}
+
+.font-changes-parrent:first-child .font-changes-child {
+  margin-left: 0;
+}
+
+#smaller-font{
+  margin-left: 0;
+}
+
+#font-changes-text {
+  width: 50%;
+}
+
+#settings-list {
+  list-style-type: none;
 }

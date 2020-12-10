@@ -28,7 +28,7 @@ $(function () {
     });
 
     // Show modal for settings
-    $("#btnShow").click(function () {
+    $(".btnShow").click(function () {
         $("#sampleModal").modal("show");
     });
 
@@ -59,4 +59,21 @@ $(function () {
             head.appendChild(style);
         }
     })
+
+    
+    // Changing font size functions
+    $('#smaller-font').click(function () {
+        if (document.body.style.fontSize == "") {
+            document.body.style.fontSize = "1.0em";
+          }
+        document.body.style.fontSize = parseFloat(document.body.style.fontSize) - (1 * 0.2) + "em";
+    })
+
+    $('#larger-font').click(function () {
+        if (document.body.style.fontSize == "") {
+            document.body.style.fontSize = "1.0em";
+          }
+        document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (1 * 0.2) + "em";
+    })
+
 });
