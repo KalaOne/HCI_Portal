@@ -213,7 +213,7 @@ margin-right: -330px;
   cursor: move;
 }
 
-.widget.over {
+.PageOptions2.over {
   border: 3px dotted #666;
 }
 
@@ -309,7 +309,7 @@ margin-right: -330px;
 .HideOrShow {
   display: none;
   position: absolute;
-  top: 12%;
+  top: 10%;
   left: 65%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -319,7 +319,7 @@ margin-right: -330px;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
 }
 

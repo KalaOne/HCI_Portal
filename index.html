@@ -102,7 +102,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand text-center" href="index.html">
-          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+          <img src="static/UEA_logo.png" id="logo" alt="UEA Logo">
         </a>
 
         <ul class="navbar-nav ml-auto">
@@ -180,8 +180,10 @@
 
   <div class="container WidgetContainer">
     <!-- Jumbotron Header -->
+    <br>
     <h1 class="display-3" style="text-align: center">My Dashboard</h1>
-    <br><br>
+
+    <br>
     <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton"
       title="Edit Widgets">Modify
       Widgets</button>
@@ -465,7 +467,7 @@
       }
 
 
-      let items = document.querySelectorAll('.WidgetContainer .widget');
+      let items = document.querySelectorAll('.WidgetContainer .PageOptions2');
       items.forEach(function (item) {
         item.addEventListener('dragstart', handleDragStart, false);
         item.addEventListener('dragenter', handleDragEnter, false);
@@ -478,65 +480,7 @@
 
   </script>
 
-  <!--Script to change between "edit" and "save" for modifying widgets.-->
-  <!--Source: https://css-tricks.com/swapping-out-text-five-different-ways/-->
-
-  <script>
-    // $('.EditWidgets').on("click", function() {
-    //   var el = $(this);
-    //   if (el.text() == el.data("text-swap")) {
-    //     el.text(el.data("text-original"));
-    //   } else {
-    //     el.data("text-original", el.text());
-    //     el.text(el.data("text-swap"));
-    //   }
-    // });
-
-  </script>
-
-  <!--&lt;!&ndash;Script to change between "Hide" and "Show" for modifying widgets.&ndash;&gt;-->
-  <!--&lt;!&ndash;Source: https://css-tricks.com/swapping-out-text-five-different-ways/&ndash;&gt;-->
-
-  <!--<script>-->
-  <!--$('.HideOrShow').on("click", function() {-->
-  <!--  var el = $(this);-->
-  <!--  if (el.text() == el.data("text-swap")) {-->
-  <!--    el.text(el.data("text-original"));-->
-  <!--  } else {-->
-  <!--    el.data("text-original", el.text());-->
-  <!--    el.text(el.data("text-swap"));-->
-  <!--  }-->
-  <!--});-->
-
-  <!--</script>-->
-
-  <!--<script>-->
-  <!--function ToggleHideOrShow() {-->
-
-  <!--    var HideShow = document.getElementsByClassName('HideOrShow');-->
-
-  <!--    // Get the current value of the hide/show button's display property-->
-  <!--    var displaySetting = HideShow.style.display;-->
-
-  <!--    // Get the modify widget button, to change what it says.-->
-  <!--    var ModifyWidgetButton = document.getElementsByClassName('EditWidgets');-->
-
-  <!--    //  toggle the hide/show and the modify button text, depending on current state-->
-  <!--    if (display == 'none') {-->
-  <!--      // hide/show is visible. hide it-->
-  <!--      HideShow.style.display = 'block';-->
-  <!--      // change button text-->
-  <!--      ModifyWidgetButton.innerHTML = 'Modify Widgets';-->
-  <!--    }-->
-  <!--    else {-->
-  <!--      // Hide/Show is hidden. show it-->
-  <!--      HideShow.style.display = 'block';-->
-  <!--      // change button text-->
-  <!--      ModifyWidgetButton.innerHTML = 'Save Changes';-->
-  <!--    }-->
-  <!--  }-->
-  <!--</script>-->
-
+  <!--Source: https://css-tricks.com/swapping-out-text-five-different-ways/&ndash;&gt;-->
   <!--Hide the "Hide/Show" buttons and only show them when in edit mode.-->
 
   <script>
