@@ -16,7 +16,8 @@
   <!-- Custom styles for this template -->
   <link href="css/general.css" rel="stylesheet">
   <!-- Font awesome icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
@@ -26,85 +27,136 @@
 
 <body>
   <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
-  <!-- Nav bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><h3>MY UEA</h3></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-       aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+  <!-- Navbar desktop -->
+  <div id="desktop-viewport">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbar-search" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
+                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                  More...
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../HCI_Portal/news.html">News</a>
-          </li>
-          <!-- <li class="nav-item">
-           <i class="fa fa-search nav-link" id="search"></i>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" id="navbar-search" href="#">Search</a>
-          </li>
-          <li class="nav-item">
-            <div class="btn-group dropright">
-              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                More...
-              </button>
-            </div>
+            <button class="btn btnShow">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <button class="btn" id="btnShow" >
-            <i class="fa fa-cog" aria-hidden="true"></i>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
+  <!-- Nav bar Mobile-->
+  <div id="mobile-viewport">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbar-search" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
+                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                  More...
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler pull-left" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-center" href="index.html">
+          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button class="btn btnShow">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <!-- Settings modal -->
   <div class="modal" id="sampleModal">
     <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Settings</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul>
-                  <li><button id="colour-inversion">Invert colours</button></li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Settings</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <ul id="settings-list">
+            <li><button class="btn btn-info" id="colour-inversion">Invert colours</button></li>
+            <li class="font-changes-parrent" id="font-changes">
+              <button class="btn btn-info font-changes-child" id="smaller-font">-</button>
+              <p class="font-changes-child" id="font-changes-text">Change font size</p>
+              <button class="btn btn-info font-changes-child" id="larger-font">+</button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Sidebar -->
   <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
     <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
-      <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span aria-hidden="true" class="text-light">&times;</span></button>
-        <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
+      <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span
+          aria-hidden="true" class="text-light">&times;</span></button>
+      <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
     </header>
     <div class="bs-canvas-content px-3 py-4">
       <!-- Sidebar content -->
       <form class="form-inline" id="menu-search">
-        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-          aria-label="Search">
-          <a href="#">
-            <i class="fas fa-search" aria-hidden="true"></i>
-          </a>
+        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+        <a href="#">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </a>
       </form>
       <ul class="list-group list-group-flush side-menu-links">
         <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
@@ -118,7 +170,7 @@
         <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
         <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
       </ul>
-    </div>    
+    </div>
   </div>
 
   <!-- Page Content -->
@@ -137,7 +189,9 @@
     <h2 class="display-3" style=" text-align: center">COVID-19 Guidance</h2>
     <br><br>
     <p><a class="btn btn-pink" id="DailyCOVID" href="https://my.uea.ac.uk/news/-/article/covid-19-update"
-        target="_blank" title="Daily Updates of COVID-19 Cases on Campus"><b>Daily Update of COVID-19 Cases on Campus</b></a>
+        target="_blank" title="Daily Updates of COVID-19 Cases on Campus"><b>Daily Update of COVID-19 Cases on
+          Campus</b></a>
+
     </p>
     <!-- Page Features -->
     <div class="row text-center">
@@ -211,75 +265,80 @@
     <div class="row ">
 
       <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
-            <div class="card h-100 news_card">
-              <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\tier 2.jpg" alt="">
-              <div class="news_date"  style="padding-top: 8px; padding-left: 20px; height: 20px;">
-                  <p>01 Dec 2020</p>
-              </div>
-              <div class="card-body">
-                <a href="#" class="news_title_link" style="color: black; font-size: 24px;line-height: 22pt">
-                    Tier 2 - what does it mean?
-                </a>
-                <p class="card-text" style="margin-top: 0.75rem">
-                    Norwich is being placed into Tier 2 (High) restrictions from tomorrow [2 December] –
-                  learn more about what being in Tier 2 will mean
-                </p>
-              </div>
-  <!--            <div class="card-footer">-->
-  <!--              <a href="#" class="btn btn-primary">More Information</a>-->
-  <!--            </div>-->
-            </div>
-         </div>
-        <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
-              <div class="card h-100 news_card">
-                <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\LF Testing MY UEA pic LB.jpg" alt="">
-                <div class="news_date" style="padding-top: 8px; padding-left: 20px; height: 20px;">
-                    <p>01 Dec 2020</p>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="news_title_link" style="color: black; font-size: 24px;line-height: 22pt">
-                      There's still time to book a rapid COVID test
-                  </a>
-                  <p class="card-text" style="margin-top: 0.75rem">
-                      Tests are quick, simple and available until 9 Dec – watch SU Welfare Officer Em Anderson
-                      take you through the process.
-                  </p>
-                </div>
-    <!--            <div class="card-footer">-->
-    <!--              <a href="#" class="btn btn-primary">More Information</a>-->
-    <!--            </div>-->
-              </div>
-           </div>
+        <div class="card h-100 news_card">
+          <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\tier 2.jpg" alt="">
+          <div class="news_date" style="padding-top: 8px; padding-left: 20px; height: 20px;">
+            <p>01 Dec 2020</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="news_title_link" style="color: black; font-size: 24px;line-height: 22pt">
+              Tier 2 - what does it mean?
+            </a>
+            <p class="card-text" style="margin-top: 0.75rem">
+              Norwich is being placed into Tier 2 (High) restrictions from tomorrow [2 December] –
+              learn more about what being in Tier 2 will mean
+            </p>
+          </div>
+          <!--            <div class="card-footer">-->
+          <!--              <a href="#" class="btn btn-primary">More Information</a>-->
+          <!--            </div>-->
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
+        <div class="card h-100 news_card">
+          <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\LF Testing MY UEA pic LB.jpg"
+            alt="">
+          <div class="news_date" style="padding-top: 8px; padding-left: 20px; height: 20px;">
+            <p>01 Dec 2020</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="news_title_link" style="color: black; font-size: 24px;line-height: 22pt">
+              There's still time to book a rapid COVID test
+            </a>
+            <p class="card-text" style="margin-top: 0.75rem">
+              Tests are quick, simple and available until 9 Dec – watch SU Welfare Officer Em Anderson
+              take you through the process.
+            </p>
+          </div>
+          <!--            <div class="card-footer">-->
+          <!--              <a href="#" class="btn btn-primary">More Information</a>-->
+          <!--            </div>-->
+        </div>
+      </div>
 
-          <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
-            <div class="card h-100 news_card">
-              <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\second lockdown student.jpg" alt="">
-              <div class="news_date" style="padding-top: 8px; padding-left: 20px; height: 20px;">
-                  <p>3 Nov 2020</p>
-              </div>
-              <div class="card-body">
-                <a href="#" class="news_title_link" style="color: black; font-size: 24px;line-height: 22pt">
-                    Lockdown announcement: student FAQs
-                </a>
-                <p class="card-text" style="margin-top: 0.75rem">
-                    Following the goverment's announcement on Saturday that another nationwide lockdown will begin on
-                    Thursday (5 November), a series of FAQs for students have been...
-                </p>
-              </div>
-  <!--            <div class="card-footer">-->
-  <!--              <a href="#" class="btn btn-primary">More Information</a>-->
-  <!--            </div>-->
-            </div>
-         </div>
+      <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
+        <div class="card h-100 news_card">
+          <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\second lockdown student.jpg"
+            alt="">
+          <div class="news_date" style="padding-top: 8px; padding-left: 20px; height: 20px;">
+            <p>3 Nov 2020</p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="news_title_link" style="color: black; font-size: 24px;line-height: 22pt">
+              Lockdown announcement: student FAQs
+            </a>
+            <p class="card-text" style="margin-top: 0.75rem">
+              Following the goverment's announcement on Saturday that another nationwide lockdown will begin on
+              Thursday (5 November), a series of FAQs for students have been...
+            </p>
+          </div>
+          <!--            <div class="card-footer">-->
+          <!--              <a href="#" class="btn btn-primary">More Information</a>-->
+          <!--            </div>-->
+        </div>
+      </div>
       <br>
       <!--More news button-->
       <div class="container">
         <div class="row">
-              <a class="btn btn-pink col-lg-4 col-md-6 mb-4" id= "MoreCOVIDNews" href="https://my.uea.ac.uk/news" target="_blank" title="View More News">View More News</a>
+          <a class="btn btn-pink col-lg-4 col-md-6 mb-4" id="MoreCOVIDNews" href="https://my.uea.ac.uk/news"
+            target="_blank" title="View More News">View More News</a>
         </div>
       </div>
       <br>
     </div>
+
+  </div>
 
   </div>
   <!-- /.container -->
@@ -287,17 +346,23 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark" id="PortalFooter">
     <div class="container">
-      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
+      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research
+        Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
       </p>
       <br>
       <div class="container">
-      <div class="footer_links">
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" style="color: #FFFFFF !important">Accessibility</a> |
-              <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank" style="color: #FFFFFF !important">Legal Statements</a> |
-              <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement" target="_blank" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
-              <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" style="color: #FFFFFF !important">Cookie Policy</a> |
-              <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection" target="_blank" style="color: #FFFFFF !important">Data Protection</a>
-          </div>
+        <div class="footer_links">
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank"
+            style="color: #FFFFFF !important">Accessibility</a> |
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank"
+            style="color: #FFFFFF !important">Legal Statements</a> |
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement"
+            target="_blank" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank"
+            style="color: #FFFFFF !important">Cookie Policy</a> |
+          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection"
+            target="_blank" style="color: #FFFFFF !important">Data Protection</a>
+        </div>
       </div>
     </div>
     <!-- /.container -->

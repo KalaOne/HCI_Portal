@@ -14,7 +14,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .news_card:hover {
-  opacity: 0.9;
+
+  filter: brightness(90%);
   color: #737373;
 }
 
@@ -27,6 +28,7 @@
 .news_image{
     border-radius: 5px;
 }
+
 .news_title_link{
     color: black;
     font-size: 24px;
@@ -44,16 +46,18 @@
 }
 
 .announcement_button:hover {
-    opacity: 0.5;
+    filter: brightness(90%);
 }
 
 .continue_button{
     padding-right:0px;
     padding-top: -2px;
+    text-decoration: underline;
+    color:  #00aef0;
 }
 
 .continue_button:hover{
-    opacity: 0.5;
+    filter: brightness(90%);
 }
 
 
@@ -67,6 +71,6 @@
 }
 
 #MoreCOVIDNews:hover {
-  opacity: 0.5;
-  color: white;
+    filter: brightness(90%);
+    color: white;
 }

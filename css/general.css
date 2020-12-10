@@ -33,10 +33,11 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+
 /*Footer CSS*/
 
 #PortalFooter {
-  background: #282828 !important;
+  background: #282828 !important;;;
   color: #FFFFFF !important;
   text-align: center !important;
 }
@@ -44,16 +45,16 @@ body {
 /*COVID Page CSS*/
 
 #DailyCOVID:hover {
-  opacity: 0.5;
+  filter: brightness(90%);
   color: white;
 }
 
 .PageOptions img:hover {
-    opacity: 0.5;
+    filter: brightness(90%);
+    border-radius: 20px;
 }
 
 #MoreCOVIDNews {
-    /*max-width:15%;*/
     display:block;
     background-color: #e40087;
     color: white;
@@ -64,19 +65,24 @@ body {
     font-family: brandonTextBlack,Arial,sans-serif;
 }
 
+.btn-pink {
+  background-color: #e40087;
+  color: white;
+}
+
 #MoreCOVIDNews:hover {
-  opacity: 0.5;
+  filter: brightness(90%);
   color: white;
 }
 
 .PageOptions1 img:hover {
-    opacity: 0.5;
+  filter: brightness(90%);
+  border-radius: 8px;
 }
 
 #DailyCOVID {
   max-width:100%;
   display:block;
-  background-color: #e40087;
   color: white;
   width: 100%;
   margin: 0 auto 2px;
@@ -138,9 +144,193 @@ margin-right: -330px;
   width: 86%;
 }
 
+.navbar {
+  background-color:#282828 !important;;
+}
+@media only screen and (max-width: 991px) {
+  #desktop-viewport {
+    visibility: hidden;
+  }
+  #mobile-viewport {
+    visibility: visible; 
+  }
+  .navbar-toggler {
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  #desktop-viewport {
+    visibility: visible;
+  }
+  #mobile-viewport {
+    visibility: hidden; 
+  }
+}
+
+.font-changes-parrent {
+  display: table;
+  width: 60%;
+  margin: 10px 0;
+}
+
+.font-changes-child {
+  display: table-cell;
+  margin-left: 25px;
+}
+
+.font-changes-parrent:first-child .font-changes-child {
+  margin-left: 0;
+}
+
+#smaller-font{
+  margin-left: 0;
+  width: 2.3em;
+}
+
+#font-changes-text {
+  width: 50%;
+}
+
+#settings-list {
+  list-style-type: none;
 /*Breadcrumbs CSS*/
+}
 
 .breadcrumb {
     background-color: white;
     padding: 0;
+}
+
+/*Homepage Widgets CSS*/
+
+.WidgetContainer {
+  display: grid;
+}
+
+.widget {
+  cursor: move;
+}
+
+.widget.over {
+  border: 3px dotted #666;
+}
+
+.EditWidgets {
+  max-width:100%;
+  display:block;
+  color: white;
+  width: 100%;
+  margin: 0 auto 2px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: brandonTextBlack,Arial,sans-serif;
+}
+
+.EditWidgets:hover {
+  filter: brightness(90%);
+  color: white;
+}
+
+.CancelChanges {
+  max-width:100%;
+  display:none;
+  background-color: grey;
+  color: white;
+  width: 100%;
+  margin: 0 auto 2px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: brandonTextBlack,Arial,sans-serif;
+}
+
+.CancelChanges:hover {
+    filter: brightness(90%);
+    color: white;
+}
+
+/*CSS To Make Widgets Show/Hide*/
+#BB {
+    display: block;
+}
+
+#EV {
+    display: block;
+}
+
+#ES {
+    display: block;
+}
+
+#COVID {
+    display: block;
+}
+
+#Pay {
+    display: block;
+}
+
+#LIB {
+    display: block;
+}
+
+#Health {
+    display: block;
+}
+
+#Work {
+    display: block;
+}
+
+#NS {
+    display: block;
+}
+
+.PageOptions img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px; 
+}
+
+.PageOptions2 img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* /* filter: brightness(95%); */
+  border-radius: 20px; 
+}
+
+.PageOptions2 img:hover {
+  filter: brightness(90%);
+  border-radius: 20px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+/*Widget Edit Buttons*/
+
+.HideOrShow {
+  display: none;
+  position: absolute;
+  top: 12%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #00aef0;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.HideOrShow:hover {
+  filter: brightness(90%);
+}
+
+#close-settings-button {
+  color: white;
+}
+
+.btn-uea-blue {
+  background-color:  #00aef0;
+  color: white;
 }

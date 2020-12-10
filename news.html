@@ -35,51 +35,97 @@
 <body>
 
   <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
-  <!-- Nav bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><h3>MY UEA</h3></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-       aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+  <!-- Navbar Desktop -->
+  <div id="desktop-viewport">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbar-search" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
+                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                  More...
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../HCI_Portal/news.html">News</a>
-              <span class="sr-only">(current)</span>
-          </li>
-          <!-- <li class="nav-item">
-           <i class="fa fa-search nav-link" id="search"></i>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" id="navbar-search" href="#">Search</a>
-          </li>
-          <li class="nav-item">
-            <div class="btn-group dropright">
-              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                More...
-              </button>
-            </div>
+            <button class="btn btnShow">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <button class="btn" id="btnShow" >
-            <i class="fa fa-cog" aria-hidden="true"></i>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
+
+  <!-- Nav bar Mobile-->
+  <div id="mobile-viewport">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbar-search" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
+                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                  More...
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler pull-left" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-center" href="index.html">
+          <img src="../UEA_logo.PNG" id="logo" alt="UEA Logo">
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button class="btn btnShow">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <!-- COVID-19 Banner -->
-  <div class="p-3 mb-2 mt-2 bg-warning text-dark text-center banner ">
+  <div class="p-3 mb-2 bg-warning text-dark text-center banner ">
     <a href="../HCI_Portal/COVID_Guidance.html">See latest COVID-19 Information</a>
   </div>
 
@@ -87,22 +133,27 @@
   <!-- Settings modal -->
   <div class="modal" id="sampleModal">
     <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Settings</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul>
-                  <li><button id="colour-inversion">Invert colours</button></li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Settings</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <ul id="settings-list">
+            <li><button class="btn btn-info" id="colour-inversion">Invert colours</button></li>
+            <li class="font-changes-parrent" id="font-changes">
+              <button class="btn btn-info font-changes-child" id="smaller-font">-</button>
+              <p class="font-changes-child" id="font-changes-text">Change font size</p>
+              <button class="btn btn-info font-changes-child" id="larger-font">+</button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -183,7 +234,7 @@
             but deeply-rooted iniquities can only be tackled as a united community – not left to...
               <div class="row">
                 <div class="col-sm-9"></div>
-                <button class="btn btn-pink col-sm-3 continue_button" >Continue reading...</button>
+                <button class="btn col-sm-3 continue_button" >Continue reading...</button>
               </div>
            </p>
        </div>
@@ -197,7 +248,7 @@
               Whether it’s our professional services staff working round the clock to devise...
                 <div class="row">
                     <div class="col-sm-9"></div>
-                    <button class="btn btn-pink col-sm-3 continue_button">Continue reading...</button>
+                    <button class="btn btn-uea-bluecol-sm-3 continue_button">Continue reading...</button>
                 </div>
             </p>
        </div>
@@ -266,7 +317,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="5" >
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\news-safety-first-one.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\news-safety-first-one.jpg" alt="">
             <div class="news_date">
                 <p>09 Dec 2020</p>
             </div>
@@ -287,7 +338,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="6">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\DeanMainOrange.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\DeanMainOrange.jpg" alt="">
             <div class="news_date">
                 <p>04 Dec 2020</p>
             </div>
@@ -308,7 +359,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="7">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\SchoolchildrenMain.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\SchoolchildrenMain.jpg" alt="">
             <div class="news_date">
                 <p>07 Dec 2020</p>
             </div>
@@ -329,7 +380,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="8">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\Winter Warmth V3.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Winter Warmth V3.jpg" alt="">
             <div class="news_date">
                 <p>08 Dec 2020</p>
             </div>
@@ -350,7 +401,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="9">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\ArjBlur.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\ArjBlur.jpg" alt="">
             <div class="news_date">
                 <p>08 Dec 2020</p>
             </div>
@@ -371,7 +422,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="10">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\Lateral for lasdun CMYK.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Lateral for lasdun CMYK.jpg" alt="">
             <div class="news_date">
                 <p>08 Dec 2020</p>
             </div>
@@ -393,7 +444,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="11">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\sainsbury 2.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\sainsbury 2.jpg" alt="">
             <div class="news_date">
                 <p>08 Dec 2020</p>
             </div>
@@ -415,7 +466,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="12">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\TrophiesCrop.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\TrophiesCrop.jpg" alt="">
             <div class="news_date">
                 <p>07 Dec 2020</p>
             </div>
@@ -437,7 +488,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="13">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\NeilJamesBulletin.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\NeilJamesBulletin.jpg" alt="">
             <div class="news_date">
                 <p>01 Dec 2020</p>
             </div>
@@ -459,7 +510,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="14">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\Pension Savings Main 720 x 350.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Pension Savings Main 720 x 350.jpg" alt="">
             <div class="news_date">
                 <p>01 Dec 2020</p>
             </div>
@@ -481,7 +532,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="15">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\news-lts-covid-pages.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\news-lts-covid-pages.jpg" alt="">
             <div class="news_date">
                 <p>01 Dec 2020</p>
             </div>
@@ -503,7 +554,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="16">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\Proud to sponsor social graphic.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\Proud to sponsor social graphic.jpg" alt="">
             <div class="news_date">
                 <p>08 Dec 2020</p>
             </div>
@@ -524,7 +575,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="17">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\lab pic final.png" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\lab pic final.png" alt="">
             <div class="news_date">
                 <p>30 Nov 2020</p>
             </div>
@@ -545,7 +596,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="18">
           <div class="card h-100 news_card">
-            <img class="card-img-top news_image" src="C:\Users\asus\PycharmProjects\HCI_Portal\static\News elements\ShengLaura.jpg" alt="">
+            <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\ShengLaura.jpg" alt="">
             <div class="news_date">
                 <p>29 Nov 2020</p>
             </div>
