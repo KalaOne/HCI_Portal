@@ -19,41 +19,129 @@
 
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/general.css" rel="stylesheet">
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
+  <!-- JavaScript -->
+  <script src="javascript/general.js"></script>
 </head>
 
 <body>
 
-  <!-- Navigation -->
+  <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
+  <!-- Nav bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html"><h3>MY UEA</h3></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+       aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../HCI_Portal/news.html">News</a>
               <span class="sr-only">(current)</span>
-            </a>
+          </li>
+          <!-- <li class="nav-item">
+           <i class="fa fa-search nav-link" id="search"></i>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" id="navbar-search" href="#">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <div class="btn-group dropright">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
+                More...
+              </button>
+            </div>
           </li>
         </ul>
       </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn" id="btnShow" >
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 
+
+  <!-- Settings modal -->
+  <div class="modal" id="sampleModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                  <li><button id="colour-inversion">Invert colours</button></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
+    <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
+      <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span aria-hidden="true" class="text-light">&times;</span></button>
+        <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
+    </header>
+    <div class="bs-canvas-content px-3 py-4">
+      <!-- Sidebar content -->
+      <form class="form-inline" id="menu-search">
+        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          <a href="#">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </a>
+      </form>
+      <ul class="list-group list-group-flush side-menu-links">
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+      </ul>
+    </div>
+  </div>
+
   <!-- Page Content -->
   <div class="container">
+    <br>
+
+    <!--Breadcrumbs for website-->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><b>Home</b></a></li>
+        <li class="breadcrumb-item active" aria-current="page"><b>News</b></li>
+      </ol>
+    </nav>
 
     <!-- Page Header -->
     <div class="row" style="padding: 8px ">

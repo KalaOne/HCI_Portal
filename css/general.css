@@ -53,7 +53,7 @@ body {
 }
 
 #MoreCOVIDNews {
-    max-width:15%;
+    /*max-width:15%;*/
     display:block;
     background-color: #e40087;
     color: white;
