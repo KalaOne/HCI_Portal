@@ -27,7 +27,7 @@
 }
 
 #MoreCOVIDNews {
-    max-width:15%;
+    /*max-width:15%;*/
     display:block;
     background-color: #00aef0;
     color: white;
