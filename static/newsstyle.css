@@ -55,3 +55,18 @@
 .continue_button:hover{
     opacity: 0.5;
 }
+
+
+#MoreCOVIDNews {
+    /*max-width:15%;*/
+    display:block;
+    background-color: #00aef0;
+    color: white;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+#MoreCOVIDNews:hover {
+  opacity: 0.5;
+  color: white;
+}
