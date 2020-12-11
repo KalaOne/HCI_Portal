@@ -2,12 +2,12 @@
     text-align: center;
 }
 
-#filter_position{
-    padding-right: 20px; padding-bottom: 5px
-}
 
 #view-filter{
-    width:150px;
+    width:220px;
+    float:right;
+    padding-left:10px;
+    /*padding-right:10px;*/
 }
 .news_card {
     width: 100%;
@@ -51,18 +51,18 @@
 
 .continue_button{
     padding-right:0;
-    padding-top: -2px;
     text-decoration: underline;
+    font-weight: bold;
     color:  #00aef0;
 }
 
 .continue_button:hover{
+    font-weight: bold;
     filter: brightness(90%);
+
 }
 
-
 #MoreCOVIDNews {
-    /*max-width:15%;*/
     display:block;
     background-color: #00aef0;
     color: white;
@@ -85,4 +85,9 @@
 
 .news_view {
 
+}
+.filter_style{
+    float:right;
+    padding-left: 90px;
+    padding-bottom: 5px;
 }

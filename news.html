@@ -189,35 +189,37 @@
 
   <!-- Page Content -->
   <div class="container">
+    <div class="row" style="padding: 8px ">
+        <div class="col-sm-9">
+        <!--Breadcrumbs for website-->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><b>Home</b></a></li>
+                <li class="breadcrumb-item active" aria-current="page"><b>News</b></li>
+              </ol>
+            </nav>
+        </div>
 
-    <!--Breadcrumbs for website-->
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html"><b>Home</b></a></li>
-        <li class="breadcrumb-item active" aria-current="page"><b>News</b></li>
-      </ol>
-    </nav>
+    </div>
 
     <!-- Page Header -->
     <div class="row" style="padding: 8px ">
         <div class="col-sm-2"></div>
           <h1 class="col-sm-12 display-3" id="news_header">News</h1>
-    <!-- Dropdown menu for student/staff news -->
+
     </div>
-    <div class="row" style=" text-align: right">
-        <div class="col-sm-7"></div>
-        <div class="col-sm-2 news_view"> View news: </div>
-        <div class="col-sm-3 dropdown" id="filter_position">
-            <select class="custom-select car-row"  id="view-filter" onchange="jsFunction(this.value);">
-                <option value='Staff_val'>For Staff</option>
-                <option value='Student_val' selected >For Students</option>
+    <div class="row" >
+        <div class="col-sm-9"></div>
+        <!-- Dropdown menu for student/staff news -->
+        <div class="col-sm-3 dropdown filter_style">
+            <select class="custom-select car-row"  id="view-filter" onchange="newsFilter(this.value);">
+                <option value='Staff_val'> View news: For Staff</option>
+                <option value='Student_val' selected>View news: For Students</option>
             </select>
         </div>
-
     </div>
 
     <!--  Email announcements section -->
-<!--    <div class="row text-center" style="background-color: #E0E0E0; border-radius: 25px; margin: 5px;">-->
     <div class="row text-center" >
       <!-- Header for announcements-->
       <div class="col-lg-12 col-md-6 mb-4 " >
@@ -234,13 +236,12 @@
             but deeply-rooted iniquities can only be tackled as a united community – not left to...
               <div class="row">
                 <div class="col-sm-9"></div>
-                <button class="btn col-sm-3 continue_button" ><b>Continue reading...</b></button>
+                <a class="btn continue_button col-sm-3 " >Continue reading...</a>
               </div>
            </p>
        </div>
 
        <div class="col-lg-12 col-md-6 mb-4 announcement" id="2">
-<!--        <h6 class="display-3" style="text-align: left" >Email Announcements</h6>-->
             <p class="text-left" >
                 <b>Message from the Vice-Chancellor to all staff - Friday 20 November</b>
                 </br>
@@ -248,7 +249,7 @@
               Whether it’s our professional services staff working round the clock to devise...
                 <div class="row">
                     <div class="col-sm-9"></div>
-                    <button class="btn col-sm-3 continue_button"><b>Continue reading...</b></button>
+                    <button class="btn col-sm-3 continue_button">Continue reading...</button>
                 </div>
             </p>
        </div>
@@ -264,13 +265,12 @@
                 Dear Students, Here is some important guidance and latest government information to help you with your plans for the winter break...
               <div class="row">
                 <div class="col-sm-9"></div>
-                <button class="btn col-sm-3 continue_button"><b>Continue reading...</b></button>
+                <button class="btn col-sm-3 continue_button">Continue reading...</button>
               </div>
            </p>
        </div>
 
        <div class="col-lg-12 col-md-6 mb-4 announcement" id="4">
-<!--        <h6 class="display-3" style="text-align: left" >Email Announcements</h6>-->
             <p class="text-left" >
                 <b>Message from Deputy Vice-Chancellor Professor Neil Ward:
                     Teaching arrangements for the end of term - Friday 13 November</b>
@@ -280,12 +280,12 @@
                  who are planning to return home for the winter break.  As announced in our message...
                 <div class="row">
                     <div class="col-sm-9"></div>
-                    <button class="btn col-sm-3 continue_button"><b>Continue reading...</b></button>
+                    <button class="btn col-sm-3 continue_button">Continue reading...</button>
                 </div>
             </p>
        </div>
         <!-- Link to more announcements -->
-        <div class="col-lg-12 col-md-6 mb-4" id="2" >
+        <div class="col-lg-12 col-md-6 mb-4" >
             <div class="row" style="height: 30px;">
                 <div class="col-sm-1"></div>
                     <button class="btn btn-pink col-sm-10 announcement_button" style="padding-right: 10px; text-align: center; ">More announcements...</button>
@@ -296,23 +296,11 @@
     </div>
 
 
-    <!--  Search bar -->
-<!--      <div class="row">-->
-<!--        <nav class="navbar navbar-light bg-light">-->
-<!--          <form class="form-inline">-->
-<!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-<!--          </form>-->
-<!--        </nav>-->
-<!--      </div>-->
-
-
     <!-- Latest News  -->
     <div class="row">
         <!-- Latest News header -->
         <div class="col-lg-12 col-md-6 mb-4">
           <h4 class="display-4" id="Latest_news_section_header" >Latest News</h4>
-<!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="5" >
@@ -329,9 +317,7 @@
                   a reminder on safety measures and what the University is doing to support students
                   in self-isolation.</p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
+
           </div>
         </div>
 
@@ -351,9 +337,7 @@
                   running in 2020 commemorates UEA’s cleaning staff. This is Dean Newton's story.
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
+
           </div>
         </div>
 
@@ -372,9 +356,7 @@
                   likely for thousands of young people from the most disadvantaged backgrounds in...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
+
           </div>
         </div>
 
@@ -393,9 +375,7 @@
                   and campus treasure hunts – find all this and more in the Winter Warmth programme for...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
+
           </div>
         </div>
 
@@ -414,9 +394,6 @@
                   Read Pharmacy student Arj’s story of accessing Wellbeing services at UEA.
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -435,9 +412,6 @@
                   has limited spaces.
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -457,9 +431,6 @@
                   boasting exciting exhibitions, a new coffee outlet and a fresh cafe menu, with...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -658,7 +629,7 @@
       document.getElementById("15").style.display = "block";
       document.getElementById("18").style.display = "block";
 
-        function jsFunction(value){
+        function newsFilter(value){
             if (value == "Staff_val") {
                 document.getElementById("1").style.display = "block";
                 document.getElementById("2").style.display = "block";
