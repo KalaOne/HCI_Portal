@@ -57,6 +57,7 @@ body {
 #MoreCOVIDNews {
     display:block;
     background-color: #e40087;
+    font-weight: bold;
     color: white;
     width: 100%;
     margin: 0 auto 10px;
@@ -70,8 +71,13 @@ body {
   color: white;
 }
 
+.btn-pink:hover {
+    filter: brightness(85%);
+    color: white;
+}
+
 #MoreCOVIDNews:hover {
-  filter: brightness(90%);
+  filter: brightness(85%);
   color: white;
 }
 
@@ -218,19 +224,20 @@ margin-right: -330px;
 }
 
 .EditWidgets {
-  max-width:100%;
-  display:block;
-  color: white;
-  width: 100%;
-  margin: 0 auto 2px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-family: brandonTextBlack,Arial,sans-serif;
+    max-width:100%;
+    font-weight: bold;
+    display:block;
+    color: white;
+    width: 100%;
+    margin: 0 auto 2px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: brandonTextBlack,Arial,sans-serif;
 }
 
 .EditWidgets:hover {
-  filter: brightness(90%);
-  color: white;
+    filter: brightness(85%);
+    color: white;
 }
 
 .CancelChanges {
@@ -246,7 +253,7 @@ margin-right: -330px;
 }
 
 .CancelChanges:hover {
-    filter: brightness(90%);
+    filter: brightness(85%);
     color: white;
 }
 
@@ -294,7 +301,6 @@ margin-right: -330px;
 
 .PageOptions2 img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* /* filter: brightness(95%); */
   border-radius: 20px; 
 }
 
@@ -324,14 +330,19 @@ margin-right: -330px;
 }
 
 .HideOrShow:hover {
-  filter: brightness(90%);
+    filter: brightness(85%);
 }
 
 #close-settings-button {
-  color: white;
+    color: white;
 }
 
-.btn-uea-blue {
-  background-color:  #00aef0;
-  color: white;
+.btn-uea-blue{
+    font-weight: bold;
+    background-color:  #00aef0;
+    color: white;
+}
+.btn-uea-blue:hover {
+    filter: brightness(85%);
+    color: white;
 }

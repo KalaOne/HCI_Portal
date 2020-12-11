@@ -49,10 +49,6 @@ html {
     height: 20px;
 }
 
-.announcement_button:hover {
-    filter: brightness(90%);
-}
-
 .continue_button{
     padding-right:0;
     text-decoration: underline;
@@ -66,18 +62,14 @@ html {
 
 }
 
-#MoreCOVIDNews {
-    display:block;
-    background-color: #00aef0;
-    color: white;
-    width: 100%;
-    margin: 0 auto 10px;
-}
+/*#MoreCOVIDNews {*/
+/*    display:block;*/
+/*    background-color: #00aef0;*/
+/*    color: white;*/
+/*    width: 100%;*/
+/*    margin: 0 auto 10px;*/
+/*}*/
 
-#MoreCOVIDNews:hover {
-    filter: brightness(90%);
-    color: white;
-}
 
 .announcement{
     width: 100%;
@@ -87,9 +79,6 @@ html {
     padding-left: 10px
 }
 
-.news_view {
-
-}
 .filter_style{
     float:right;
     padding-left: 90px;
