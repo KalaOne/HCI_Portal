@@ -335,3 +335,21 @@ margin-right: -330px;
   background-color:  #00aef0;
   color: white;
 }
+
+#close-settings-button {
+  margin-right: 5em;
+}
+
+#modal-search-content {
+  background-color: rgba(00, ae, f0, 1) !important;
+  width: 80%;
+}
+
+#modal-search-body {
+  margin: 0 -3.5em;
+}
+
+#search-form {
+  margin-top: 1.5em;
+  margin-bottom: -1em;
+}

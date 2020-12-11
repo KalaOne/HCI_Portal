@@ -2,7 +2,7 @@ $(function () {
     var bsOverlay = $('.bs-canvas-overlay');
     $('[data-toggle="canvas"]').on('click', function () {
         var ctrl = $(this),
-            elm = ctrl.is('button') ? ctrl.data('target') : ctrl.attr('href');
+            elm = ctrl.is('a') ? ctrl.data('target') : ctrl.attr('href');
         $(elm).addClass('mr-0');
         $(elm + ' .bs-canvas-close').attr('aria-expanded', "true");
         $('[data-target="' + elm + '"], a[href="' + elm + '"]').attr('aria-expanded', "true");
@@ -26,6 +26,11 @@ $(function () {
             bsOverlay.removeClass('show');
         return false;
     });
+
+    // Show modal for settings
+    $("#navbar-search").click(function () {
+        $("#searchModal").modal("show");
+    })
 
     // Show modal for settings
     $(".btnShow").click(function () {

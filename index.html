@@ -52,10 +52,8 @@
             </li>
             <li class="nav-item">
               <div class="btn-group dropright">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
-                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                  More...
-                </button>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="canvas" data-target="#bs-canvas-right"
+                  aria-expanded="false" aria-controls="bs-canvas-right">More...</a>
               </div>
             </li>
           </ul>
@@ -121,6 +119,26 @@
     <a href="../HCI_Portal/COVID_Guidance.html">See latest COVID-19 Information</a>
   </div>
 
+  <!-- Search modal -->
+  <div class="modal" id="searchModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" id="modal-search-content">
+        <div class="modal-body" id="modal-search-body">
+          <form class="form-inline d-flex justify-content-center md-form form-sm" id="search-form">
+            <input class="form-control form-control-lg mr-3 w-75" type="text" placeholder="Search"
+              aria-label="Search">
+              <a href="../HCI_Portal/index.html">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </a>
+          </form>
+          <br>
+          <br>
+          <button type="button" class="btn btn-pink float-right" id="close-settings-button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Settings modal -->
   <div class="modal" id="sampleModal">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -133,12 +151,12 @@
         </div>
         <div class="modal-body">
           <ul id="settings-list">
-            <li><button class="btn btn-uea-blue" id="colour-inversion">Invert colours</button></li>
             <li class="font-changes-parrent" id="font-changes">
               <button class="btn btn-uea-blue font-changes-child" id="smaller-font">-</button>
               <p class="font-changes-child" id="font-changes-text">Change font size</p>
               <button class="btn btn-uea-blue font-changes-child" id="larger-font">+</button>
             </li>
+            <li><button class="btn btn-uea-blue" id="colour-inversion">Invert colours</button></li>
           </ul>
         </div>
         <div class="modal-footer">
@@ -158,22 +176,21 @@
     <div class="bs-canvas-content px-3 py-4">
       <!-- Sidebar content -->
       <form class="form-inline" id="menu-search">
-        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
         <a href="#">
           <i class="fas fa-search" aria-hidden="true"></i>
         </a>
       </form>
       <ul class="list-group list-group-flush side-menu-links">
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/help-me-with" class="text-dark">Help me with</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/events" class="text-dark">Events</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/faculties-and-schools" class="text-dark">Faculties and schools</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/divisions" class="text-dark">Divisions</a></li>
+        <li class="list-group-item"><a href="https://itsupport.uea.ac.uk/" class="text-dark">Log an IT call</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/communities" class="text-dark">Communities</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/directories" class="text-dark">Directories</a></li>
+        <li class="list-group-item"><a href="https://beta.uea.ac.uk/about/campus-map" class="text-dark">Campus map</a></li>
+        <li class="list-group-item"><a href="https://my.uea.ac.uk/c/portal/logout" class="text-dark">Log out</a></li>
       </ul>
     </div>
   </div>
@@ -184,8 +201,7 @@
     <h1 class="display-3" style="text-align: center">My Dashboard</h1>
 
     <br>
-    <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton"
-      title="Edit Widgets">Modify
+    <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton" title="Edit Widgets">Modify
       Widgets</button>
     <br>
     <button class="btn btn-pink CancelChanges" onclick="window.location.reload();" id="CancelButton"
@@ -300,8 +316,8 @@
   </div>
 
   <div class="col-lg-12 col-md-6 mb-4">
-    <h4 class="display-4" id="Latest_news_section_header" >Latest News</h4>
-<!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
+    <h4 class="display-4" id="Latest_news_section_header">Latest News</h4>
+    <!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
   </div>
 
   <div class="container">
