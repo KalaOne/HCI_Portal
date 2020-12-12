@@ -203,7 +203,7 @@
     </div>
 
     <!-- Page Header -->
-    <div class="row" style="padding: 8px ">
+    <div class="row">
         <div class="col-sm-2"></div>
         <h1 class="col-sm-12 display-3" id="news_header">News</h1>
     </div>
@@ -213,8 +213,8 @@
         <!-- Dropdown menu for student/staff news -->
         <div class="col-sm-3 dropdown filter_style">
             <select class="custom-select car-row"  id="view-filter" onchange="newsFilter(this.value);">
-                <option value='Staff_val'> View news: For Staff</option>
-                <option value='Student_val' selected>View news: For Students</option>
+                <option value='Staff_val'> View News: For Staff</option>
+                <option value='Student_val' selected>View News: For Students</option>
             </select>
         </div>
     </div>
@@ -288,27 +288,29 @@
        </div>
     </div>
 
+    <!--  Buttons  -->
     <div class="row text-center">
-        <!-- Link to more announcements -->
-        <div class="col-lg-12 " >
-            <div class="row" style="height: 30px;">
-                <div class="col-lg-1"></div>
-                    <button class="btn btn-pink col-lg-10 announcement_button" style=" text-align: center; ">More announcements...</button>
-                <div class="col-lg-1"></div>
+        <div class="col-lg-12">
+            <div class="row" style="height: 30px;" id="news_section" >
+                <!-- Link to more announcements -->
+                <button class="btn btn-pink col-lg-5 " style="font-weight: bold">More announcements...</button>
+                <!-- Link to scroll to News section -->
+                <div class="col-lg-2"></div>
+                <a class="btn btn-uea-blue col-lg-5 " href="#news_section" >Scroll to Latest News section</a>
             </div>
         </div>
     </div>
 
 
     <!-- Latest News  -->
-    <div class="row text-center">
+    <div class="row text-center" >
         <!-- Latest News header -->
         <div class="col-lg-12 ">
           <h4 class="display-4" id="Latest_news_section_header" >Latest News</h4>
         </div>
     </div>
 
-    <div class="row ">
+    <div class="row" >
         <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="5" >
           <div class="card h-100 news_card">
             <img class="card-img-top news_image" src="..\HCI_Portal\static\News elements\news-safety-first-one.jpg" alt="">
@@ -323,7 +325,6 @@
                   a reminder on safety measures and what the University is doing to support students
                   in self-isolation.</p>
             </div>
-
           </div>
         </div>
 
@@ -343,7 +344,6 @@
                   running in 2020 commemorates UEA’s cleaning staff. This is Dean Newton's story.
               </p>
             </div>
-
           </div>
         </div>
 
@@ -362,7 +362,6 @@
                   likely for thousands of young people from the most disadvantaged backgrounds in...
               </p>
             </div>
-
           </div>
         </div>
 
@@ -381,7 +380,6 @@
                   and campus treasure hunts – find all this and more in the Winter Warmth programme for...
               </p>
             </div>
-
           </div>
         </div>
 
@@ -456,9 +454,6 @@
                   campus running in 2020 commemorates UEA’s cleaning staff. This is Dean Newton's story.
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -478,9 +473,6 @@
                   employees at Grades 1-6 (support staff categories only) can sign up to from...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -500,9 +492,6 @@
                   has limited spaces.
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -522,9 +511,6 @@
                   can find details of adjustments and support put in place to help you with your...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -544,9 +530,6 @@
                   with the Broads Authority being named the winner of the UEA-sponsored...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -565,9 +548,6 @@
                   before completing a PhD and becoming a Lecturer and Group Leader in Norwich Medical...
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -585,20 +565,13 @@
                   Leading female academics welcome University’s membership of a national women in science network.
               </p>
             </div>
-<!--            <div class="card-footer">-->
-<!--              <a href="#" class="btn btn-primary">More Information</a>-->
-<!--            </div>-->
+
           </div>
         </div>
 
 
     </div>
-<!--      <button>More News</button>-->
 
-    <!-- news section closes below -->
-<!--    </div>-->
-    <!-- /.row -->
-  <!-- container closes below-->
   </div>
 
 
@@ -618,7 +591,6 @@
           </div>
       </div>
     </div>
-    <!-- /.container -->
   </footer>
 
 
