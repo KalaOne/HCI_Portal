@@ -41,21 +41,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">HOME</a>
-              <span class="sr-only">(current)</span>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../HCI_Portal/news.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="navbar-search" href="#">Search</a>
+              <a class="nav-link navbar-search" href="#">Search</a>
             </li>
             <li class="nav-item">
               <div class="btn-group dropright">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
-                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                  More...
-                </button>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="canvas" data-target="#bs-canvas-right"
+                  aria-expanded="false" aria-controls="bs-canvas-right">More...</a>
               </div>
             </li>
           </ul>
@@ -75,33 +72,32 @@
   <div id="mobile-viewport">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+        <div class="dropdown">
+          <button class="navbar-toggler" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="dropdown-menu text-center" id="dd-menu" aria-labelledby="dropdownMenuButton">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">HOME</a>
-              <span class="sr-only">(current)</span>
+              <a class="nav-link text-light navbar-search" href="#">Search</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+              <a class="nav-link text-light active" href="../HCI_Portal/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="navbar-search" href="#">Search</a>
+              <a class="nav-link text-light" href="../HCI_Portal/news.html">News</a>
             </li>
             <li class="nav-item">
               <div class="btn-group dropright">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
-                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                  More...
-                </button>
+                <div class="btn-group dropright">
+                  <a class="nav-link text-light dropdown-toggle" href="#" data-toggle="canvas"
+                    data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">More...</a>
+                </div>
               </div>
             </li>
-          </ul>
+          </div>
         </div>
-        <button class="navbar-toggler pull-left" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand text-center" href="index.html">
+        <a class="navbar-brand text-center" href="../HCI_Portal/index.html">
           <img src="static/UEA_logo.png" id="logo" alt="UEA Logo">
         </a>
 
@@ -121,6 +117,26 @@
     <a href="../HCI_Portal/COVID_Guidance.html">View COVID-19 Guidance</a>
   </div>
 
+  <!-- Search modal -->
+  <div class="modal" id="searchModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" id="modal-search-content">
+        <div class="modal-body" id="modal-search-body">
+          <form class="form-inline d-flex justify-content-center md-form form-sm" id="search-form">
+            <input class="form-control form-control-lg mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+            <a href="../HCI_Portal/index.html">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </a>
+          </form>
+          <br>
+          <br>
+          <button type="button" class="btn btn-pink float-right" id="close-settings-button"
+            data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Settings modal -->
   <div class="modal" id="sampleModal">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -133,12 +149,13 @@
         </div>
         <div class="modal-body">
           <ul id="settings-list">
-            <li><button class="btn btn-uea-blue" id="colour-inversion">Invert colours</button></li>
             <li class="font-changes-parrent" id="font-changes">
               <button class="btn btn-uea-blue font-changes-child" id="smaller-font">-</button>
               <p class="font-changes-child" id="font-changes-text">Change font size</p>
               <button class="btn btn-uea-blue font-changes-child" id="larger-font">+</button>
+              <button class="btn btn-uea-blue font-changes-child" id="reset-font">Reset</button>
             </li>
+            <li><button class="btn btn-uea-blue" id="colour-inversion">Invert colours</button></li>
           </ul>
         </div>
         <div class="modal-footer">
@@ -150,7 +167,7 @@
 
   <!-- Sidebar -->
   <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
-    <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
+    <header class="bs-canvas-header p-3 overflow-auto">
       <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span
           aria-hidden="true" class="text-light">&times;</span></button>
       <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
@@ -158,22 +175,27 @@
     <div class="bs-canvas-content px-3 py-4">
       <!-- Sidebar content -->
       <form class="form-inline" id="menu-search">
-        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
         <a href="#">
           <i class="fas fa-search" aria-hidden="true"></i>
         </a>
       </form>
       <ul class="list-group list-group-flush side-menu-links">
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="../HCI_Portal/COVID_Guidance.html"
+            class="text-white">COVID-19</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Help me with</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Events</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Faculties and
+            schools</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Divisions</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="https://itsupport.uea.ac.uk/" class="text-white">Log an IT
+            call</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Communities</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Directories</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="https://beta.uea.ac.uk/about/campus-map"
+            class="text-white">Campus map</a>
+        </li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Log out</a></li>
       </ul>
     </div>
   </div>
@@ -184,8 +206,7 @@
     <h1 class="display-3" style="text-align: center">My Dashboard</h1>
 
     <br>
-    <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton"
-      title="Edit Widgets">Modify
+    <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton" title="Edit Widgets">Modify
       Widgets</button>
     <br>
     <button class="btn btn-pink CancelChanges" onclick="window.location.reload();" id="CancelButton"
@@ -264,41 +285,53 @@
 
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
-        <div class="PageOptions2">
-          <a href="#" id="Health">
-            <img class="MyWellbeing" src="../HCI_Portal/static/HomeIcons/MyWellbeing.jpg" alt="Wellbeing Widget">
-          </a>
-          <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
-          <br><br>
-        </div>
-
-      </div>
-
-
-      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
-        <div class="PageOptions2">
-          <a href="#" id="Work">
-            <img class="CareerCentral" src="../HCI_Portal/static/HomeIcons/CareerCentral.jpg"
-              alt="CareerCentral Widget">
-          </a>
-          <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Hide</button>
-          <br><br>
+        <div class="d-none more-widgets-div">
+          <div class="PageOptions2">
+            <a href="#" id="Health">
+              <img class="MyWellbeing" src="../HCI_Portal/static/HomeIcons/MyWellbeing.jpg" alt="Wellbeing Widget">
+            </a>
+            <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
+            <br><br>
+          </div>
         </div>
       </div>
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
-        <div class="PageOptions2">
-          <a href="#" id="NS">
-            <img class="NewStudents" src="../HCI_Portal/static/HomeIcons/NewStudents.jpg" alt="New Students Widget">
-          </a>
-          <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Hide</button>
-          <br><br>
+        <div class="d-none more-widgets-div">
+          <div class="PageOptions2">
+            <a href="#" id="Work">
+              <img class="CareerCentral" src="../HCI_Portal/static/HomeIcons/CareerCentral.jpg"
+                alt="CareerCentral Widget">
+            </a>
+            <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Hide</button>
+            <br><br>
+          </div>
+        </div>
+      </div>
+
+      <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
+        <div class="d-none more-widgets-div">
+          <div class="PageOptions2">
+            <a href="#" id="NS">
+              <img class="NewStudents" src="../HCI_Portal/static/HomeIcons/NewStudents.jpg" alt="New Students Widget">
+            </a>
+            <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Hide</button>
+            <br><br>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 
+  <div class="container text-center">
+    <button class="btn btn-uea-blue" id="btn-more-widgets" title="Show more widgets">More widgets <i
+        class="fa fa-arrow-down" aria-hidden="true"></i></button>
+  </div>
+
+  <div class="col-lg-12 col-md-6 mb-4">
+    <h4 class="display-4" id="Latest_news_section_header">Latest News</h4>
+    <!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
   <!-- Link to scroll down -->
   <div class="row text-center">
       <div class="col-lg-12 " >
@@ -492,6 +525,7 @@
     function myFunction() {
       var editButton = document.getElementById('EditWidgetButton');
       var x = document.getElementById("HideShowButton1").style.display;
+
       if (x == "block") {
         editButton.innerHTML = 'Modify Widgets';
         document.getElementById("HideShowButton1").style.display = "none";
@@ -504,6 +538,7 @@
         document.getElementById("HideShowButton8").style.display = "none";
         document.getElementById("HideShowButton9").style.display = "none";
         document.getElementById("CancelButton").style.display = "none";
+
         alert("Your changes have been saved.");
 
       } else {

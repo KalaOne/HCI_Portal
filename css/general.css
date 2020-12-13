@@ -151,7 +151,7 @@ margin-right: -330px;
 }
 
 .navbar {
-  background-color:#282828 !important;;
+  background-color:#282828 !important;
 }
 @media only screen and (max-width: 991px) {
   #desktop-viewport {
@@ -176,13 +176,16 @@ margin-right: -330px;
 
 .font-changes-parrent {
   display: table;
-  width: 60%;
   margin: 10px 0;
 }
 
 .font-changes-child {
   display: table-cell;
   margin-left: 25px;
+}
+
+#reset-font {
+  margin-left: 2.2em;
 }
 
 .font-changes-parrent:first-child .font-changes-child {
@@ -196,6 +199,8 @@ margin-right: -330px;
 
 #font-changes-text {
   width: 50%;
+  margin-left: 1em;
+  text-align: center;
 }
 
 #settings-list {
@@ -342,6 +347,33 @@ margin-right: -330px;
     background-color:  #00aef0;
     color: white;
 }
+
+#close-settings-button {
+  margin-right: 5em;
+}
+
+#modal-search-content {
+  background-color: rgba(00, ae, f0, 1) !important;
+  width: 80%;
+}
+
+#modal-search-body {
+  margin: 0 -3.5em;
+}
+
+#search-form {
+  margin-top: 1.5em;
+  margin-bottom: -1em;
+}
+
+#dd-menu {
+  background-color:#282828 !important
+}
+
+.bs-canvas-header {
+  background-color:#282828 !important
+}
+
 .btn-uea-blue:hover {
     filter: brightness(85%);
     color: white;
