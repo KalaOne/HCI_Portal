@@ -215,13 +215,15 @@
     <br>
 
     <!-- Page Features -->
-    <div class="row text-center">
+    <div class="row text-center no-gutters">
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
           <a href="#" id="BB">
             <img class="blackboard" src="../HCI_Portal/static/HomeIcons/Blackboard.jpg" alt="Blackboard Widget">
           </a>
+          <!-- Movable image overlay-->
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon1" width="195" height="195">
           <button class="HideOrShow" id="HideShowButton1" onclick="HideBB()" data-text-swap="Show">Hide</button>
           <br><br>
         </div>
@@ -232,6 +234,10 @@
           <a href="#" id="EV">
             <img class="Evision" src="../HCI_Portal/static/HomeIcons/Evision.png" alt="Evision Widget">
           </a>
+        <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon2" width="195" height="195">
+          </div>
           <button class="HideOrShow" id="HideShowButton2" onclick="HideEV()" data-text-swap="Show">Hide</button>
           <br><br>
         </div>
@@ -243,6 +249,12 @@
             <img class="EmailSchedule" src="../HCI_Portal/static/HomeIcons/EmailSchedule.jpg"
               alt="Email & Schedule Widget">
           </a>
+
+        <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon3" width="195" height="195">
+          </div>
+
           <button class="HideOrShow" id="HideShowButton3" onclick="HideES()" data-text-swap="Show">Hide</button>
           <br><br>
         </div>
@@ -255,6 +267,11 @@
             id="COVID">
             <img class="COVIDUpdates" src="../HCI_Portal/static/HomeIcons/COVID19.jpg" alt="COVID-19 Widget">
           </a>
+        <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon4" width="195" height="195">
+          </div>
+
           <button class="HideOrShow" id="HideShowButton4" onclick="HideCOVID()" data-text-swap="Show">Hide</button>
           <br><br>
         </div>
@@ -266,6 +283,11 @@
           <a href="#" id="Pay">
             <img class="Payslips" src="../HCI_Portal/static/HomeIcons/Payslips.jpg" alt="Payslips Widget">
           </a>
+
+        <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon5" width="195" height="195">
+          </div>
           <button class="HideOrShow" id="HideShowButton5" onclick="HidePay()" data-text-swap="Show">Hide</button>
           <br><br>
         </div>
@@ -277,6 +299,11 @@
           <a href="#" id="LIB">
             <img class="MyLibrary" src="../HCI_Portal/static/HomeIcons/Library.jpg" alt="Library Widget">
           </a>
+          <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon6" width="195" height="195">
+          </div>
+
           <button class="HideOrShow" id="HideShowButton6" onclick="HideLIB()" data-text-swap="Show">Hide</button>
           <br><br>
         </div>
@@ -290,7 +317,12 @@
             <a href="#" id="Health">
               <img class="MyWellbeing" src="../HCI_Portal/static/HomeIcons/MyWellbeing.jpg" alt="Wellbeing Widget">
             </a>
-            <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
+          <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon7" width="195" height="195">
+          </div>
+
+          <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
             <br><br>
           </div>
         </div>
@@ -303,8 +335,13 @@
               <img class="CareerCentral" src="../HCI_Portal/static/HomeIcons/CareerCentral.jpg"
                 alt="CareerCentral Widget">
             </a>
-            <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Hide</button>
-            <br><br>
+          <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon8" width="195" height="195">
+          </div>
+
+          <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Hide</button>
+          <br><br>
           </div>
         </div>
       </div>
@@ -315,23 +352,24 @@
             <a href="#" id="NS">
               <img class="NewStudents" src="../HCI_Portal/static/HomeIcons/NewStudents.jpg" alt="New Students Widget">
             </a>
+          <!-- Movable image overlay-->
+          <div class="overlay">
+            <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon9" width="195" height="195">
+          </div>
             <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Hide</button>
             <br><br>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <div class="container text-center">
-    <button class="btn btn-uea-blue" id="btn-more-widgets" title="Show more widgets">More widgets <i
-        class="fa fa-arrow-down" aria-hidden="true"></i></button>
-  </div>
-
+     <div class="container text-center">
+        <button class="btn btn-pink" id="btn-more-widgets" title="Show more widgets">View More Widgets <i
+        aria-hidden="true"></i></button>
+    </div>
+    <br>
   <div class="col-lg-12 col-md-6 mb-4">
-    <h4 class="display-4" id="Latest_news_section_header">Latest News</h4>
-    <!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
   <!-- Link to scroll down -->
   <div class="row text-center">
       <div class="col-lg-12 " >
@@ -342,12 +380,11 @@
           </div>
       </div>
   </div>
-
+  <br><br>
   <!-- News Section -->
   <div class="col-lg-12 col-md-6 mb-4">
     <h4 class="display-4" id="Latest_news_section_header" >Latest News</h4>
   </div>
-
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6 mb-4 news_card_position" id="5">
@@ -539,6 +576,16 @@
         document.getElementById("HideShowButton9").style.display = "none";
         document.getElementById("CancelButton").style.display = "none";
 
+        document.getElementById("MoveIcon1").style.display = "none";
+        document.getElementById("MoveIcon2").style.display = "none";
+        document.getElementById("MoveIcon3").style.display = "none";
+        document.getElementById("MoveIcon4").style.display = "none";
+        document.getElementById("MoveIcon5").style.display = "none";
+        document.getElementById("MoveIcon6").style.display = "none";
+        document.getElementById("MoveIcon7").style.display = "none";
+        document.getElementById("MoveIcon8").style.display = "none";
+        document.getElementById("MoveIcon9").style.display = "none";
+
         alert("Your changes have been saved.");
 
       } else {
@@ -552,6 +599,16 @@
         document.getElementById("HideShowButton8").style.display = "block";
         document.getElementById("HideShowButton9").style.display = "block";
         document.getElementById("CancelButton").style.display = "block";
+
+        document.getElementById("MoveIcon1").style.display = "block";
+        document.getElementById("MoveIcon2").style.display = "block";
+        document.getElementById("MoveIcon3").style.display = "block";
+        document.getElementById("MoveIcon4").style.display = "block";
+        document.getElementById("MoveIcon5").style.display = "block";
+        document.getElementById("MoveIcon6").style.display = "block";
+        document.getElementById("MoveIcon7").style.display = "block";
+        document.getElementById("MoveIcon8").style.display = "block";
+        document.getElementById("MoveIcon9").style.display = "block";
 
         editButton.innerHTML = 'Save Changes';
 

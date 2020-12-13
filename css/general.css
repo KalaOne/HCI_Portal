@@ -306,13 +306,12 @@ margin-right: -330px;
 
 .PageOptions2 img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 .PageOptions2 img:hover {
   filter: brightness(90%);
   border-radius: 20px;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 /*Widget Edit Buttons*/
@@ -335,7 +334,7 @@ margin-right: -330px;
 }
 
 .HideOrShow:hover {
-    filter: brightness(85%);
+    filter: brightness(90%);
 }
 
 #close-settings-button {
@@ -375,6 +374,15 @@ margin-right: -330px;
 }
 
 .btn-uea-blue:hover {
-    filter: brightness(85%);
+    filter: brightness(90%);
     color: white;
+}
+
+.MoveWidget {
+    opacity: 60%;
+    display: none;
+    position: absolute;
+    top: 40.7%;
+    left: 49.8%;
+    transform: translate(-50%, -50%);
 }
