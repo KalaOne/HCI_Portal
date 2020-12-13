@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #news_header{
     text-align: center;
 }
@@ -21,8 +25,8 @@
 
 #Latest_news_section_header{
     text-align: center;
-    padding-top:60px;
-    /*margin:20px*/
+    /*padding-top:10px;*/
+    margin:20px
 }
 
 .news_image{
@@ -45,10 +49,6 @@
     height: 20px;
 }
 
-.announcement_button:hover {
-    filter: brightness(90%);
-}
-
 .continue_button{
     padding-right:0;
     text-decoration: underline;
@@ -62,18 +62,14 @@
 
 }
 
-#MoreCOVIDNews {
-    display:block;
-    background-color: #00aef0;
-    color: white;
-    width: 100%;
-    margin: 0 auto 10px;
-}
+/*#MoreCOVIDNews {*/
+/*    display:block;*/
+/*    background-color: #00aef0;*/
+/*    color: white;*/
+/*    width: 100%;*/
+/*    margin: 0 auto 10px;*/
+/*}*/
 
-#MoreCOVIDNews:hover {
-    filter: brightness(90%);
-    color: white;
-}
 
 .announcement{
     width: 100%;
@@ -83,9 +79,6 @@
     padding-left: 10px
 }
 
-.news_view {
-
-}
 .filter_style{
     float:right;
     padding-left: 90px;

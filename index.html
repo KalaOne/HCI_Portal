@@ -82,7 +82,7 @@
               <a class="nav-link text-light navbar-search" href="#">Search</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light active" href="../HCI_Portal/news.html">Home</a>
+              <a class="nav-link text-light active" href="../HCI_Portal/index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="../HCI_Portal/news.html">News</a>
@@ -97,7 +97,7 @@
             </li>
           </div>
         </div>
-        <a class="navbar-brand text-center" href="index.html">
+        <a class="navbar-brand text-center" href="../HCI_Portal/index.html">
           <img src="static/UEA_logo.png" id="logo" alt="UEA Logo">
         </a>
 
@@ -219,7 +219,7 @@
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
-          <a href="https://learn.uea.ac.uk/" id="BB">
+          <a href="#" id="BB">
             <img class="blackboard" src="../HCI_Portal/static/HomeIcons/Blackboard.jpg" alt="Blackboard Widget">
           </a>
           <button class="HideOrShow" id="HideShowButton1" onclick="HideBB()" data-text-swap="Show">Hide</button>
@@ -229,7 +229,7 @@
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
-          <a href="https://sso.uea.ac.uk/evision" id="EV">
+          <a href="#" id="EV">
             <img class="Evision" src="../HCI_Portal/static/HomeIcons/Evision.png" alt="Evision Widget">
           </a>
           <button class="HideOrShow" id="HideShowButton2" onclick="HideEV()" data-text-swap="Show">Hide</button>
@@ -239,7 +239,7 @@
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
-          <a href="https://webmail.uea.ac.uk/" id="ES">
+          <a href="#" id="ES">
             <img class="EmailSchedule" src="../HCI_Portal/static/HomeIcons/EmailSchedule.jpg"
               alt="Email & Schedule Widget">
           </a>
@@ -251,7 +251,7 @@
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
-          <a href="https://my.uea.ac.uk/divisions/admissions-recruitment-marketing/communications/covid-19-information-and-guidance"
+          <a href="#"
             id="COVID">
             <img class="COVIDUpdates" src="../HCI_Portal/static/HomeIcons/COVID19.jpg" alt="COVID-19 Widget">
           </a>
@@ -263,7 +263,7 @@
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
-          <a href="https://myview.uea.ac.uk/dashboard/dashboard-ui/index.html#/landing" id="Pay">
+          <a href="#" id="Pay">
             <img class="Payslips" src="../HCI_Portal/static/HomeIcons/Payslips.jpg" alt="Payslips Widget">
           </a>
           <button class="HideOrShow" id="HideShowButton5" onclick="HidePay()" data-text-swap="Show">Hide</button>
@@ -274,7 +274,7 @@
 
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="PageOptions2">
-          <a href="https://my.uea.ac.uk/library" id="LIB">
+          <a href="#" id="LIB">
             <img class="MyLibrary" src="../HCI_Portal/static/HomeIcons/Library.jpg" alt="Library Widget">
           </a>
           <button class="HideOrShow" id="HideShowButton6" onclick="HideLIB()" data-text-swap="Show">Hide</button>
@@ -287,7 +287,7 @@
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="d-none more-widgets-div">
           <div class="PageOptions2">
-            <a href="https://my.uea.ac.uk/help-me-with/my-wellbeing" id="Health">
+            <a href="#" id="Health">
               <img class="MyWellbeing" src="../HCI_Portal/static/HomeIcons/MyWellbeing.jpg" alt="Wellbeing Widget">
             </a>
             <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
@@ -299,7 +299,7 @@
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="d-none more-widgets-div">
           <div class="PageOptions2">
-            <a href="https://my.uea.ac.uk/divisions/research-and-innovation/careers" id="Work">
+            <a href="#" id="Work">
               <img class="CareerCentral" src="../HCI_Portal/static/HomeIcons/CareerCentral.jpg"
                 alt="CareerCentral Widget">
             </a>
@@ -312,7 +312,7 @@
       <div draggable="false" class="col-lg-4 col-md-6 mb-4 widget">
         <div class="d-none more-widgets-div">
           <div class="PageOptions2">
-            <a href="https://my.uea.ac.uk/help-me-with/being-a-new-student" id="NS">
+            <a href="#" id="NS">
               <img class="NewStudents" src="../HCI_Portal/static/HomeIcons/NewStudents.jpg" alt="New Students Widget">
             </a>
             <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Hide</button>
@@ -332,6 +332,20 @@
   <div class="col-lg-12 col-md-6 mb-4">
     <h4 class="display-4" id="Latest_news_section_header">Latest News</h4>
     <!--          <h3 class="display-5" style="text-align: left" >Latest News</h3>-->
+  <!-- Link to scroll down -->
+  <div class="row text-center">
+      <div class="col-lg-12 " >
+          <div class="row" style="height: 30px;" id="news_section">
+              <div class="col-lg-4"></div>
+              <a class="col-lg-4 col-md-6 mb-4 btn btn-uea-blue " href="#news_section">Scroll to Latest News section</a>
+              <div class="col-lg-4"></div>
+          </div>
+      </div>
+  </div>
+
+  <!-- News Section -->
+  <div class="col-lg-12 col-md-6 mb-4">
+    <h4 class="display-4" id="Latest_news_section_header" >Latest News</h4>
   </div>
 
   <div class="container">
@@ -405,7 +419,7 @@
   <!--More news button-->
   <div class="container">
     <div class="row">
-      <a class="btn btn-pink col-lg-4 col-md-6 mb-4" id="MoreCOVIDNews" href="https://my.uea.ac.uk/news" target="_blank"
+      <a class="btn btn-pink col-lg-4 col-md-6 mb-4" id="MoreCOVIDNews" href="news.html"
         title="View More News">View More News</a>
     </div>
   </div>
@@ -415,25 +429,19 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5" id="PortalFooter">
+  <footer class="py-5 bg-dark" id="PortalFooter">
     <div class="container">
-      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research
-        Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
+      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
       </p>
       <br>
       <div class="container">
-        <div class="footer_links">
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank"
-            style="color: #FFFFFF !important">Accessibility</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank"
-            style="color: #FFFFFF !important">Legal Statements</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement"
-            target="_blank" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank"
-            style="color: #FFFFFF !important">Cookie Policy</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection"
-            target="_blank" style="color: #FFFFFF !important">Data Protection</a>
-        </div>
+      <div class="text-center footer_links">
+          <a href="#" style="color: #FFFFFF !important">Accessibility</a> |
+              <a href="#" style="color: #FFFFFF !important">Legal Statements</a> |
+              <a href="#" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
+              <a href="#" style="color: #FFFFFF !important">Cookie Policy</a> |
+              <a href="#" style="color: #FFFFFF !important">Data Protection</a>
+          </div>
       </div>
     </div>
     <!-- /.container -->

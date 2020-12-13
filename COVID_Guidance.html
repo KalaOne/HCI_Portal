@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="static/newsstyle.css">
 
-  <title>COVID-19 guidance and news</title>
+  <title>COVID-19 Guidance</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 
 <body>
   <div class="bs-canvas-overlay bg-dark position-fixed w-100 h-100"></div>
-  <!-- Navbar desktop -->
+  <!-- Nav bar Desktop-->
   <div id="desktop-viewport">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
@@ -41,21 +41,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">HOME</a>
-              <span class="sr-only">(current)</span>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../HCI_Portal/news.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="navbar-search" href="#">Search</a>
+              <a class="nav-link navbar-search" href="#">Search</a>
             </li>
             <li class="nav-item">
               <div class="btn-group dropright">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
-                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                  More...
-                </button>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="canvas" data-target="#bs-canvas-right"
+                  aria-expanded="false" aria-controls="bs-canvas-right">More...</a>
               </div>
             </li>
           </ul>
@@ -75,34 +72,33 @@
   <div id="mobile-viewport">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+        <div class="dropdown">
+          <button class="navbar-toggler" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="dropdown-menu text-center" id="dd-menu" aria-labelledby="dropdownMenuButton">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">HOME</a>
-              <span class="sr-only">(current)</span>
+              <a class="nav-link text-light navbar-search" href="#">Search</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../HCI_Portal/news.html">News</a>
+              <a class="nav-link text-light" href="../HCI_Portal/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="navbar-search" href="#">Search</a>
+              <a class="nav-link text-light" href="../HCI_Portal/news.html">News</a>
             </li>
             <li class="nav-item">
               <div class="btn-group dropright">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="canvas"
-                  data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">
-                  More...
-                </button>
+                <div class="btn-group dropright">
+                  <a class="nav-link text-light dropdown-toggle" href="#" data-toggle="canvas"
+                    data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right">More...</a>
+                </div>
               </div>
             </li>
-          </ul>
+          </div>
         </div>
-        <button class="navbar-toggler pull-left" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand text-center" href="index.html">
-          <img src="../HCI_Portal/static/UEA_logo.png" id="logo" alt="UEA Logo">
+        <a class="navbar-brand text-center" href="../HCI_Portal/index.html">
+          <img src="static/UEA_logo.png" id="logo" alt="UEA Logo">
         </a>
 
         <ul class="navbar-nav ml-auto">
@@ -114,6 +110,26 @@
         </ul>
       </div>
     </nav>
+  </div>
+  
+  <!-- Search modal -->
+  <div class="modal" id="searchModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" id="modal-search-content">
+        <div class="modal-body" id="modal-search-body">
+          <form class="form-inline d-flex justify-content-center md-form form-sm" id="search-form">
+            <input class="form-control form-control-lg mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+            <a href="../HCI_Portal/index.html">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </a>
+          </form>
+          <br>
+          <br>
+          <button type="button" class="btn btn-pink float-right" id="close-settings-button"
+            data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Settings modal -->
@@ -128,16 +144,17 @@
         </div>
         <div class="modal-body">
           <ul id="settings-list">
-            <li><button class="btn btn-info" id="colour-inversion">Invert colours</button></li>
             <li class="font-changes-parrent" id="font-changes">
-              <button class="btn btn-info font-changes-child" id="smaller-font">-</button>
+              <button class="btn btn-uea-blue font-changes-child" id="smaller-font">-</button>
               <p class="font-changes-child" id="font-changes-text">Change font size</p>
-              <button class="btn btn-info font-changes-child" id="larger-font">+</button>
+              <button class="btn btn-uea-blue font-changes-child" id="larger-font">+</button>
+              <button class="btn btn-uea-blue font-changes-child" id="reset-font">Reset</button>
             </li>
+            <li><button class="btn btn-uea-blue" id="colour-inversion">Invert colours</button></li>
           </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-pink" id="close-settings-button" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -145,7 +162,7 @@
 
   <!-- Sidebar -->
   <div id="bs-canvas-right" class="bs-canvas bs-canvas-right position-fixed bg-light h-100">
-    <header class="bs-canvas-header p-3 bg-secondary overflow-auto">
+    <header class="bs-canvas-header p-3 overflow-auto">
       <button type="button" class="bs-canvas-close float-left close" aria-label="Close" aria-expanded="false"><span
           aria-hidden="true" class="text-light">&times;</span></button>
       <h4 class="d-inline-block text-light mb-0 float-right">More links</h4>
@@ -153,22 +170,27 @@
     <div class="bs-canvas-content px-3 py-4">
       <!-- Sidebar content -->
       <form class="form-inline" id="menu-search">
-        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
         <a href="#">
           <i class="fas fa-search" aria-hidden="true"></i>
         </a>
       </form>
       <ul class="list-group list-group-flush side-menu-links">
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="" class="text-dark">Cras justo odio</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="../HCI_Portal/COVID_Guidance.html"
+            class="text-white">COVID-19</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Help me with</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Events</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Faculties and
+            schools</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Divisions</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="https://itsupport.uea.ac.uk/" class="text-white">Log an IT
+            call</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Communities</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Directories</a></li>
+        <li class="list-group-item btn-uea-blue"><a href="https://beta.uea.ac.uk/about/campus-map"
+            class="text-white">Campus map</a>
+        </li>
+        <li class="list-group-item btn-uea-blue"><a href="" class="text-white">Log out</a></li>
       </ul>
     </div>
   </div>
@@ -181,7 +203,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html"><b>Home</b></a></li>
-        <li class="breadcrumb-item active" aria-current="page"><b>COVID Guidance</b></li>
+        <li class="breadcrumb-item active" aria-current="page"><b>COVID-19 Guidance</b></li>
       </ol>
     </nav>
 
@@ -199,7 +221,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
           <a
-            href="https://my.uea.ac.uk/documents/20142/3241028/Safety+First+-+COVID+Checklist.pdf/7b78b3bf-5751-6e96-714c-eb4fe8b72ff0?t=1600183785253">
+            href="#">
             <img class="checklist" src="../HCI_Portal/static/Checklist.png" alt="COVID_Checklist">
           </a>
         </div>
@@ -208,7 +230,7 @@
 
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
-          <a href="https://www.uea.ac.uk/covid19/notification-form">
+          <a href="#">
             <img class="testing" src="../HCI_Portal/static/Testing.png" alt="COVID_Testing">
           </a>
         </div>
@@ -217,7 +239,7 @@
 
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
-          <a href="https://www.uea.ac.uk/covid19/notification-form">
+          <a href="#">
             <img class="COVIDForm" src="../HCI_Portal/static/Form.png" alt="COVID_Form">
           </a>
         </div>
@@ -235,7 +257,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="PageOptions">
           <a
-            href="https://my.uea.ac.uk/documents/20142/257263/Oneway+Map2.JPG/097df4ee-da86-659d-449c-47b123d2c8f2?t=1598548648511">
+            href="#">
             <img class="routes" src="../HCI_Portal/static/Campus_Routes.png" alt="COVID_Routes">
           </a>
         </div>
@@ -253,6 +275,19 @@
 
     </div>
     <!-- /.row -->
+  </div>
+
+  <br>
+
+  <!-- Link to scroll down -->
+  <div class="row text-center">
+      <div class="col-lg-12 " >
+          <div class="row" style="height: 30px;" id="news_section">
+              <div class="col-lg-4"></div>
+              <a class="col-lg-4 col-md-6 mb-4 btn btn-uea-blue " href="#news_section">Scroll to Latest News section</a>
+              <div class="col-lg-4"></div>
+          </div>
+      </div>
   </div>
 
   <br><br>
@@ -346,23 +381,17 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark" id="PortalFooter">
     <div class="container">
-      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research
-        Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
+      <p class="m-0 text-center text-white">© UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
       </p>
       <br>
       <div class="container">
-        <div class="footer_links">
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank"
-            style="color: #FFFFFF !important">Accessibility</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank"
-            style="color: #FFFFFF !important">Legal Statements</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement"
-            target="_blank" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank"
-            style="color: #FFFFFF !important">Cookie Policy</a> |
-          <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection"
-            target="_blank" style="color: #FFFFFF !important">Data Protection</a>
-        </div>
+      <div class="text-center footer_links">
+          <a href="#" style="color: #FFFFFF !important">Accessibility</a> |
+              <a href="#" style="color: #FFFFFF !important">Legal Statements</a> |
+              <a href="#" style="color: #FFFFFF !important">Statement on Modern Slavery</a> |
+              <a href="#" style="color: #FFFFFF !important">Cookie Policy</a> |
+              <a href="#" style="color: #FFFFFF !important">Data Protection</a>
+          </div>
       </div>
     </div>
     <!-- /.container -->
