@@ -201,17 +201,79 @@
   </div>
 
   <div class="container WidgetContainer">
-    <!-- Jumbotron Header -->
+    <!-- Header with buttons-->
     <br>
     <h1 class="display-3" style="text-align: center">My Dashboard</h1>
-
     <br>
-    <button class="btn btn-pink EditWidgets" onclick="myFunction()" id="EditWidgetButton" title="Edit Widgets">Modify
-      Widgets</button>
-    <br>
-    <button class="btn btn-pink CancelChanges" onclick="window.location.reload();" id="CancelButton"
-      title="Cancel Changes">Cancel Changes </button>
+    <div class="container" style="width:88%">
+      <div class="row text-center">
+          <div class="col-lg-12">
+            <div class="row">
 
+              <div class="span4 text-center col-lg-4"><button class="btn btn-uea-blue AddWidgets " onclick="openAddWidget();" id="AddButton" title="AddWidgets">Add Widgets</button></div>
+
+              <!-- Menu for adding widgets-->
+
+              <div class="form-popup" id="myForm">
+                    <form action="/" class="form-container">
+
+                      <h1>Add Widgets</h1>
+                      <br>
+                      <div class="btn-group dropright">
+                            <button type="button" class="btn btn-secondary dropdown-toggle widgetoptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              UEA Tools
+                            </button>
+                            <div class="dropdown-menu">
+                              <!-- Dropdown menu links -->
+                              <a class="dropdown-item" draggable="true" href="#">Blackboard</a>
+                              <a class="dropdown-item" draggable="true" href="#">eVision</a>
+                              <a class="dropdown-item" draggable="true" href="#">Outlook</a>
+                            </div>
+                      </div>
+
+                        <br><br>
+
+                      <div class="btn-group dropright">
+                            <button type="button" class="btn btn-secondary dropdown-toggle widgetoptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Student Services
+                            </button>
+                            <div class="dropdown-menu">
+                              <!-- Dropdown menu links -->
+                              <a class="dropdown-item" draggable="true" href="#">Daily COVID Updates</a>
+                              <a class="dropdown-item" draggable="true" href="#">My CareerCentral</a>
+                              <a class="dropdown-item" draggable="true" href="#">My Library</a>
+                              <a class="dropdown-item" draggable="true" href="#">My Wellbeing</a>
+                              <a class="dropdown-item" draggable="true" href="#">New Students</a>
+                            </div>
+                      </div>
+
+                        <br><br>
+
+                      <div class="btn-group dropright">
+                            <button type="button" class="btn btn-secondary dropdown-toggle widgetoptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Staff Services
+                            </button>
+                            <div class="dropdown-menu">
+                              <!-- Dropdown menu links -->
+                              <a class="dropdown-item" draggable="true" href="#">Daily COVID Updates</a>
+                              <a class="dropdown-item" draggable="true" href="#">Home Working</a>
+                              <a class="dropdown-item" draggable="true" href="#">Learning and Teaching Service</a>
+                              <a class="dropdown-item" draggable="true" href="#">My Payslips</a>
+                              <a class="dropdown-item" draggable="true" href="#">My Wellbeing</a>
+                              <a class="dropdown-item" draggable="true" href="#">Staff Development</a>
+                            </div>
+                      </div>
+                        <br><br>
+                      <button type="button" class="btn cancel" onclick="closeAddwidget()">Close</button>
+                    </form>
+                </div>
+              <div class="span4 text-left col-lg-4"><button class="btn CancelChanges " onclick="window.location.reload();" id="CancelButton">Cancel Changes</button></div>
+              <div class="span4 text-right col-lg-4"><button class="btn btn-pink EditWidgets " onclick="myFunction()" id="EditWidgetButton" title="Edit Widgets">Modify Widgets</button></div>
+
+            </div>
+          </div>
+      </div>
+    </div>
     <br>
 
     <!-- Page Features -->
@@ -224,7 +286,7 @@
           </a>
           <!-- Movable image overlay-->
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon1" width="195" height="195">
-          <button class="HideOrShow" id="HideShowButton1" onclick="HideBB()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton1" onclick="HideBB()" data-text-swap="Show">Delete</button>
           <br><br>
         </div>
       </div>
@@ -238,7 +300,7 @@
           <div class="overlay">
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon2" width="195" height="195">
           </div>
-          <button class="HideOrShow" id="HideShowButton2" onclick="HideEV()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton2" onclick="HideEV()" data-text-swap="Show">Delete</button>
           <br><br>
         </div>
       </div>
@@ -255,7 +317,7 @@
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon3" width="195" height="195">
           </div>
 
-          <button class="HideOrShow" id="HideShowButton3" onclick="HideES()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton3" onclick="HideES()" data-text-swap="Show">Delete</button>
           <br><br>
         </div>
 
@@ -272,7 +334,7 @@
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon4" width="195" height="195">
           </div>
 
-          <button class="HideOrShow" id="HideShowButton4" onclick="HideCOVID()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton4" onclick="HideCOVID()" data-text-swap="Show">Delete</button>
           <br><br>
         </div>
 
@@ -288,7 +350,7 @@
           <div class="overlay">
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon5" width="195" height="195">
           </div>
-          <button class="HideOrShow" id="HideShowButton5" onclick="HidePay()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton5" onclick="HidePay()" data-text-swap="Show">Delete</button>
           <br><br>
         </div>
 
@@ -304,7 +366,7 @@
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon6" width="195" height="195">
           </div>
 
-          <button class="HideOrShow" id="HideShowButton6" onclick="HideLIB()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton6" onclick="HideLIB()" data-text-swap="Show">Delete</button>
           <br><br>
         </div>
 
@@ -322,7 +384,7 @@
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon7" width="195" height="195">
           </div>
 
-          <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton7" onclick="HideHealth()" data-text-swap="Show">Delete</button>
             <br><br>
           </div>
         </div>
@@ -340,7 +402,7 @@
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon8" width="195" height="195">
           </div>
 
-          <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Hide</button>
+          <button class="HideOrShow" id="HideShowButton8" onclick="HideWork()" data-text-swap="Show">Delete</button>
           <br><br>
           </div>
         </div>
@@ -356,7 +418,7 @@
           <div class="overlay">
             <img src="../HCI_Portal/static/MoveIcon.png" alt="Move Widget" class="MoveWidget" id="MoveIcon9" width="195" height="195">
           </div>
-            <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Hide</button>
+            <button class="HideOrShow" id="HideShowButton9" onclick="HideNS()" data-text-swap="Show">Delete</button>
             <br><br>
           </div>
         </div>
@@ -575,6 +637,8 @@
         document.getElementById("HideShowButton8").style.display = "none";
         document.getElementById("HideShowButton9").style.display = "none";
         document.getElementById("CancelButton").style.display = "none";
+        document.getElementById("AddButton").style.display = "none";
+
 
         document.getElementById("MoveIcon1").style.display = "none";
         document.getElementById("MoveIcon2").style.display = "none";
@@ -599,6 +663,7 @@
         document.getElementById("HideShowButton8").style.display = "block";
         document.getElementById("HideShowButton9").style.display = "block";
         document.getElementById("CancelButton").style.display = "block";
+        document.getElementById("AddButton").style.display = "block";
 
         document.getElementById("MoveIcon1").style.display = "block";
         document.getElementById("MoveIcon2").style.display = "block";
@@ -624,13 +689,14 @@
       var editButton = document.getElementById('HideShowButton1');
       var BlackboardWidget = document.getElementById("BB").style.display;
       if (BlackboardWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("BB").style.display = "block";
-
+        document.getElementById("MoveIcon1").style.display = "block";
       } else {
         document.getElementById("BB").style.display = "none";
+        document.getElementById("MoveIcon1").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -641,13 +707,15 @@
       var editButton = document.getElementById('HideShowButton2');
       var EvisionWidget = document.getElementById("EV").style.display;
       if (EvisionWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("EV").style.display = "block";
+        document.getElementById("MoveIcon2").style.display = "block";
 
       } else {
         document.getElementById("EV").style.display = "none";
+        document.getElementById("MoveIcon2").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -658,13 +726,15 @@
       var editButton = document.getElementById('HideShowButton3');
       var EmailScheduleWidget = document.getElementById("ES").style.display;
       if (EmailScheduleWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("ES").style.display = "block";
+        document.getElementById("MoveIcon3").style.display = "block";
 
       } else {
         document.getElementById("ES").style.display = "none";
+        document.getElementById("MoveIcon3").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -675,13 +745,16 @@
       var editButton = document.getElementById('HideShowButton4');
       var COVIDWIdget = document.getElementById("COVID").style.display;
       if (COVIDWIdget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("COVID").style.display = "block";
+        document.getElementById("MoveIcon4").style.display = "block";
 
       } else {
         document.getElementById("COVID").style.display = "none";
+        document.getElementById("MoveIcon4").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -692,13 +765,15 @@
       var editButton = document.getElementById('HideShowButton5');
       var PayWidget = document.getElementById("Pay").style.display;
       if (PayWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("Pay").style.display = "block";
+        document.getElementById("MoveIcon5").style.display = "block";
 
       } else {
         document.getElementById("Pay").style.display = "none";
+        document.getElementById("MoveIcon5").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -709,13 +784,16 @@
       var editButton = document.getElementById('HideShowButton6');
       var LIBWidget = document.getElementById("LIB").style.display;
       if (LIBWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("LIB").style.display = "block";
+        document.getElementById("MoveIcon6").style.display = "block";
+
 
       } else {
         document.getElementById("LIB").style.display = "none";
+        document.getElementById("MoveIcon6").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -726,13 +804,15 @@
       var editButton = document.getElementById('HideShowButton7');
       var HealthWidget = document.getElementById("Health").style.display;
       if (HealthWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("Health").style.display = "block";
+        document.getElementById("MoveIcon7").style.display = "block";
 
       } else {
         document.getElementById("Health").style.display = "none";
+        document.getElementById("MoveIcon7").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -743,13 +823,15 @@
       var editButton = document.getElementById('HideShowButton8');
       var WorkWidget = document.getElementById("Work").style.display;
       if (WorkWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("Work").style.display = "block";
+        document.getElementById("MoveIcon8").style.display = "block";
 
       } else {
         document.getElementById("Work").style.display = "none";
+        document.getElementById("MoveIcon8").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
@@ -760,18 +842,30 @@
       var editButton = document.getElementById('HideShowButton9');
       var NSWidget = document.getElementById("NS").style.display;
       if (NSWidget == "none") {
-        editButton.innerHTML = 'Hide';
+        editButton.innerHTML = 'Delete';
         document.getElementById("NS").style.display = "block";
+        document.getElementById("MoveIcon9").style.display = "block";
 
       } else {
         document.getElementById("NS").style.display = "none";
+        document.getElementById("MoveIcon9").style.display = "none";
 
-        editButton.innerHTML = 'Show';
+        editButton.innerHTML = 'Undo';
 
       }
     }
   </script>
 
+<!--  Add Widget function-->
+  <script>
+  function openAddWidget() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeAddwidget() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
 </body>
 
 </html>
