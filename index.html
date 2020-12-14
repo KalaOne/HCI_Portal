@@ -153,7 +153,7 @@
               <button class="btn btn-uea-blue font-changes-child" id="smaller-font">-</button>
               <p class="font-changes-child" id="font-changes-text">Change font size</p>
               <button class="btn btn-uea-blue font-changes-child" id="larger-font">+</button>
-              <button class="btn btn-uea-blue font-changes-child" id="reset-font">Reset</button>
+              <button class="btn btn-uea-blue font-changes-child" id="reset-font" >Reset</button>
             </li>
             <li><button class="btn btn-uea-blue" id="colour-inversion">Invert colours</button></li>
           </ul>
@@ -266,7 +266,7 @@
                       <button type="button" class="btn cancel" onclick="closeAddwidget()">Close</button>
                     </form>
                 </div>
-              <div class="span4 text-left col-lg-4"><button class="btn CancelChanges " onclick="window.location.reload();" id="CancelButton">Cancel Changes</button></div>
+              <div class="span4 text-left col-lg-4"><button class="btn CancelChanges " onclick="confirm('Please press OK to cancel your changes') && window.location.reload();" id="CancelButton">Cancel Changes</button></div>
               <div class="span4 text-right col-lg-4"><button class="btn btn-pink EditWidgets " onclick="myFunction()" id="EditWidgetButton" title="Edit Widgets">Modify Widgets</button></div>
 
             </div>
