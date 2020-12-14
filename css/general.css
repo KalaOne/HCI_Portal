@@ -69,6 +69,8 @@ body {
 .btn-pink {
   background-color: #e40087;
   color: white;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .btn-pink:hover {
@@ -409,6 +411,7 @@ margin-right: -330px;
     font-weight: bold;
     background-color: #00aef0;
     color: white;
+    border-radius: 8px;
 }
 
 #close-settings-button {
