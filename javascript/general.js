@@ -108,4 +108,6 @@ $(function () {
         $('.more-widgets-div').addClass('d-none');
     })
 
+    // $('#BannerLink').on('click', function() { window.location.replace('COVID_Guidance.html') })
 });
+

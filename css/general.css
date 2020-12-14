@@ -19,14 +19,20 @@ body {
 .banner{
   padding-left: 15px;
   padding-right: 15px;
+  background-color: #00aef0;
 }
 
 .banner a{
-  color: black
+  color: white;
+  font-weight: bold;
 }
 
 .banner a:hover{
-  font-weight: 750;
+  filter: brightness(90%);
+}
+
+.banner:hover{
+  filter: brightness(90%);
 }
 
 .navbar-nav > li {
