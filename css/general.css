@@ -156,6 +156,15 @@ margin-right: -330px;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 86%;
+  background-color: #282828 !important;
+}
+
+.side-menu-links > li:hover {
+  background-color: grey !important;
+}
+
+#navbar-links > li:hover {
+  background-color: grey;
 }
 
 .navbar {
@@ -289,7 +298,6 @@ margin-right: -330px;
 }
 
 /*Form for adding widgets*/
-{box-sizing: border-box;}
 
 .form-popup {
   display: none;
