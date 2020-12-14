@@ -325,10 +325,6 @@ margin-right: -330px;
     color: white;
 }
 
-.dropright {
-    max-width:100%;
-    font-family: brandonTextBlack,Arial,sans-serif;
-}
 
 /*CSS To Make Widgets Show/Hide*/
 #BB {
@@ -411,7 +407,7 @@ margin-right: -330px;
 
 .btn-uea-blue{
     font-weight: bold;
-    background-color:  #00aef0;
+    background-color: #00aef0;
     color: white;
 }
 
