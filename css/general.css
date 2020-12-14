@@ -29,6 +29,7 @@ body {
 
 .banner a:hover{
   filter: brightness(90%);
+  text-decoration: none;
 }
 
 .banner:hover{
