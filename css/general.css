@@ -468,3 +468,7 @@ margin-right: -330px;
     left: 49.8%;
     transform: translate(-50%, -50%);
 }
+
+.btnShow:hover {
+  background-color: grey;
+}

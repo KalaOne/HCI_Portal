@@ -90,6 +90,13 @@ $(function () {
     $('#btn-more-widgets').on('click', function() {
         $('.more-widgets-div').removeClass('d-none');
         $('#btn-more-widgets').addClass('d-none')
+        $('#btn-less-widgets').removeClass('d-none');
+    })
+
+    $('#btn-less-widgets').on('click', function() {
+        $('.more-widgets-div').addClass('d-none');
+        $('#btn-less-widgets').addClass('d-none')
+        $('#btn-more-widgets').removeClass('d-none');
     })
 
     $('.EditWidgets').on('click', function() {
@@ -112,6 +119,7 @@ $(function () {
       window.location = $(this).find("a").attr("href");
       return false;
     });
+
 
 
 });
